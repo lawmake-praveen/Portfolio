@@ -102,7 +102,15 @@ body {
   margin: 60px 0;
   grid-template-columns: repeat(8, 1fr);
 }
-.about .skills img {
+.about .skills div {
+  width: 85px;
+  height: 85px;
+  background-color: #fff;
+  display: grid;
+  place-content: center;
+  border-radius: 16px;
+}
+.about .skills div img {
   margin: 20px 0;
 }
 .about .resume h1, .about .resume h2, .about .resume .mail-phone {
