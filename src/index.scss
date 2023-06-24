@@ -138,17 +138,17 @@ body {
     width: 400px;
     display: flex;
     flex-direction: column;
-    background-color: #000;
+    background-color: #fff;
     padding: 10px;
     border-radius: 10px;
 
     .details {
-      color: #fff;
+      color: #000;
       text-align: center;
     }
     a {
       text-align: center;
-      color: #fff;
+      color: #000;
     }
     iframe {
       width: 380px;
