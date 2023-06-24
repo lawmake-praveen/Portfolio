@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  margin: 0;
+}
+
+* {
+  font-family: Poppins, Roboto, sans-serif;
+  outline: none;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(213, 213, 213);
+  border-radius: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+  height: 8vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  font-size: 1.1rem;
+  z-index: 100;
+}
+.navbar .left-navbar {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.navbar .right-navbar .nav-links {
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.navbar .menu-close {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+.navbar .menu-close .m-c {
+  position: absolute;
+  font-size: 1.4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: default;
+}
+.navbar .menu-close .menu {
+  display: none;
+}
+.navbar .menu-close .close {
+  display: none;
+}
+
+.scrolled {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #fff;
+}
+
+.home, .about, .projects, .contact, .message-sent {
+  height: 100vh;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  padding: 8vh 2%;
+}
+
+.app {
+  height: 100vh;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+
+.active {
+  border-bottom: 2px solid #000;
+}
+
+.home {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about {
+  height: auto;
+}
+.about .skills {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 30px;
+  margin: 60px 0;
+  grid-template-columns: repeat(8, 1fr);
+}
+.about .skills img {
+  margin: 20px 0;
+}
+.about .resume h1, .about .resume h2, .about .resume .mail-phone {
+  text-align: center;
+}
+.about .resume hr {
+  border-color: #000;
+}
+.about .resume .mail-phone a {
+  color: #000;
+}
+.about .resume .s-and-k {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+.about .resume .detail a {
+  color: #000;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: auto;
+}
+.projects .project {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 10px;
+}
+.projects .project .details {
+  color: #fff;
+  text-align: center;
+}
+.projects .project a {
+  text-align: center;
+  color: #fff;
+}
+.projects .project iframe {
+  width: 380px;
+  height: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.message-sent {
+  font-size: 1.5rem;
+  display: grid;
+  place-content: center;
+}
+
+.contact .form, .message-sent .form {
+  padding: 6% 2%;
+  width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+.contact .form input, .message-sent .form input {
+  height: 40px;
+  padding: 0 20px;
+}
+.contact .form input, .contact .form textarea, .message-sent .form input, .message-sent .form textarea {
+  font-size: 1.1rem;
+  resize: none;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+}
+.contact .form textarea, .message-sent .form textarea {
+  height: 150px;
+  grid-column: span 2;
+  padding: 20px;
+}
+.contact .form button, .message-sent .form button {
+  height: 40px;
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+}
+.contact .social, .message-sent .social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 13px;
+  width: 75%;
+  margin: auto;
+}
+.contact .social span, .message-sent .social span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.contact .social div, .message-sent .social div {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 14px;
+}
+.contact .social div a, .message-sent .social div a {
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-content: center;
+}
+.contact .social div a img, .message-sent .social div a img {
+  width: 50px;
+}
+
+@media (width < 900px) {
+  .home {
+    flex-direction: column;
+  }
+  .home .left-home img {
+    width: 350px;
+  }
+  .about .skills {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .about .resume .s-and-k {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (width < 567px) {
+  .navbar .right-navbar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-content: center;
+    line-height: 70px;
+    font-size: 2rem;
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.7);
+    width: 80%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px #7d7d7d;
+  }
+  .navbar .right-navbar .nav-links {
+    color: #fff;
+    text-align: center;
+  }
+  .navbar .right-navbar-active {
+    width: 80%;
+    height: 80%;
+  }
+  .navbar .menu-close {
+    display: block;
+  }
+  .navbar .menu-close .hide {
+    display: none;
+  }
+  .navbar .menu-close .show {
+    display: block;
+  }
+  .about .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact .form {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 2%;
+    width: 90%;
+  }
+  .contact .social {
+    width: 85%;
+  }
+  .active {
+    border-bottom: 2px white solid;
+  }
+}/*# sourceMappingURL=index.css.map */
