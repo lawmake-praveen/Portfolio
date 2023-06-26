@@ -68,17 +68,22 @@ body {
   box-shadow: 0px 0px 10px #fff;
 }
 
-.home, .about, .projects, .contact, .message-sent {
+.home,
+.about,
+.projects,
+.contact,
+.message-sent {
   height: 100vh;
-  background-color: #FBAB7E;
-  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
   padding: 8vh 2%;
+  transition: all 1s;
 }
 
 .app {
   height: 100vh;
-  background-color: #FBAB7E;
-  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
 }
 
 .active {
@@ -92,20 +97,34 @@ body {
 }
 
 .about {
-  height: auto;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.about .tech-stack {
+  font-weight: 600;
 }
 .about .skills {
   display: grid;
   align-items: center;
   justify-items: center;
   gap: 30px;
-  margin: 60px 0;
+  margin-bottom: 60px;
   grid-template-columns: repeat(8, 1fr);
 }
-.about .skills img {
+.about .skills div {
+  width: 85px;
+  height: 85px;
+  background-color: #fff;
+  display: grid;
+  place-content: center;
+  border-radius: 16px;
+}
+.about .skills div img {
   margin: 20px 0;
 }
-.about .resume h1, .about .resume h2, .about .resume .mail-phone {
+.about .resume h1,
+.about .resume h2,
+.about .resume .mail-phone {
   text-align: center;
 }
 .about .resume hr {
@@ -135,17 +154,17 @@ body {
   width: 400px;
   display: flex;
   flex-direction: column;
-  background-color: #000;
+  background-color: #fff;
   padding: 10px;
   border-radius: 10px;
 }
 .projects .project .details {
-  color: #fff;
+  color: #000;
   text-align: center;
 }
 .projects .project a {
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 .projects .project iframe {
   width: 380px;
@@ -160,7 +179,8 @@ body {
   place-content: center;
 }
 
-.contact .form, .message-sent .form {
+.contact .form,
+.message-sent .form {
   padding: 6% 2%;
   width: 80%;
   height: -moz-fit-content;
@@ -170,30 +190,37 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
 }
-.contact .form input, .message-sent .form input {
+.contact .form input,
+.message-sent .form input {
   height: 40px;
   padding: 0 20px;
 }
-.contact .form input, .contact .form textarea, .message-sent .form input, .message-sent .form textarea {
+.contact .form input,
+.contact .form textarea,
+.message-sent .form input,
+.message-sent .form textarea {
   font-size: 1.1rem;
   resize: none;
   width: 100%;
   border-radius: 10px;
   border: none;
 }
-.contact .form textarea, .message-sent .form textarea {
+.contact .form textarea,
+.message-sent .form textarea {
   height: 150px;
   grid-column: span 2;
   padding: 20px;
 }
-.contact .form button, .message-sent .form button {
+.contact .form button,
+.message-sent .form button {
   height: 40px;
   width: 200px;
   border-radius: 10px;
   border: none;
   font-size: 1.1rem;
 }
-.contact .social, .message-sent .social {
+.contact .social,
+.message-sent .social {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -201,23 +228,27 @@ body {
   width: 75%;
   margin: auto;
 }
-.contact .social span, .message-sent .social span {
+.contact .social span,
+.message-sent .social span {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.contact .social div, .message-sent .social div {
+.contact .social div,
+.message-sent .social div {
   width: 70px;
   height: 70px;
   background-color: white;
   border-radius: 14px;
 }
-.contact .social div a, .message-sent .social div a {
+.contact .social div a,
+.message-sent .social div a {
   width: 70px;
   height: 70px;
   display: grid;
   place-content: center;
 }
-.contact .social div a img, .message-sent .social div a img {
+.contact .social div a img,
+.message-sent .social div a img {
   width: 50px;
 }
 
@@ -226,7 +257,7 @@ body {
     flex-direction: column;
   }
   .home .left-home img {
-    width: 350px;
+    max-width: 350px;
   }
   .about .skills {
     grid-template-columns: repeat(4, 1fr);
@@ -247,12 +278,14 @@ body {
     font-size: 2rem;
     backdrop-filter: blur(25px) saturate(200%);
     -webkit-backdrop-filter: blur(25px) saturate(200%);
-    background-color: rgba(17, 25, 40, 0.7);
-    width: 80%;
-    height: 0;
+    background-color: rgba(77, 77, 77, 0.6);
+    width: 60%;
+    height: 60%;
+    visibility: hidden;
+    opacity: 0;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0px 0px 30px #7d7d7d;
+    box-shadow: 0px 0px 10px #F9B975;
   }
   .navbar .right-navbar .nav-links {
     color: #fff;
@@ -261,6 +294,8 @@ body {
   .navbar .right-navbar-active {
     width: 80%;
     height: 80%;
+    visibility: visible;
+    opacity: 1;
   }
   .navbar .menu-close {
     display: block;
@@ -285,5 +320,13 @@ body {
   }
   .active {
     border-bottom: 2px white solid;
+  }
+}
+@media (width < 350px) {
+  .home .left-home {
+    padding-top: 30px;
+  }
+  .home .left-home img {
+    max-width: 250px;
   }
 }/*# sourceMappingURL=index.css.map */

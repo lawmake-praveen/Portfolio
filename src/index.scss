@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
   margin: 0;
@@ -67,16 +67,21 @@ body {
   background-color: #fff;
   box-shadow: 0px 0px 10px #fff;
 }
-.home, .about, .projects, .contact, .message-sent{
+.home,
+.about,
+.projects,
+.contact,
+.message-sent {
   height: 100vh;
-  background-color: #FBAB7E;
-  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
   padding: 8vh 2%;
+  transition: all 1s;
 }
 .app {
   height: 100vh;
-  background-color: #FBAB7E;
-  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
 }
 .active {
   border-bottom: 2px solid #000;
@@ -88,22 +93,36 @@ body {
   align-items: center;
 }
 .about {
-  height: auto;
+  height: fit-content;
 
+  .tech-stack {
+    font-weight: 600;
+  }
   .skills {
     display: grid;
     align-items: center;
     justify-items: center;
     gap: 30px;
-    margin: 60px 0;
+    margin-bottom: 60px;
     grid-template-columns: repeat(8, 1fr);
 
-    img {
-      margin: 20px 0;
+    div {
+      width: 85px;
+      height: 85px;
+      background-color: #fff;
+      display: grid;
+      place-content: center;
+      border-radius: 16px;
+
+      img {
+        margin: 20px 0;
+      }
     }
   }
   .resume {
-    h1, h2, .mail-phone {
+    h1,
+    h2,
+    .mail-phone {
       text-align: center;
     }
     hr {
@@ -138,17 +157,17 @@ body {
     width: 400px;
     display: flex;
     flex-direction: column;
-    background-color: #000;
+    background-color: #fff;
     padding: 10px;
     border-radius: 10px;
 
     .details {
-      color: #fff;
+      color: #000;
       text-align: center;
     }
     a {
       text-align: center;
-      color: #fff;
+      color: #000;
     }
     iframe {
       width: 380px;
@@ -163,7 +182,8 @@ body {
   display: grid;
   place-content: center;
 }
-.contact, .message-sent {
+.contact,
+.message-sent {
   .form {
     padding: 6% 2%;
     width: 80%;
@@ -172,12 +192,13 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
-  
+
     input {
       height: 40px;
       padding: 0 20px;
     }
-    input, textarea {
+    input,
+    textarea {
       font-size: 1.1rem;
       resize: none;
       width: 100%;
@@ -214,13 +235,13 @@ body {
       height: 70px;
       background-color: white;
       border-radius: 14px;
-      
+
       a {
         width: 70px;
         height: 70px;
         display: grid;
         place-content: center;
-        
+
         img {
           width: 50px;
         }
@@ -235,7 +256,7 @@ body {
 
     .left-home {
       img {
-        width: 350px;
+        max-width: 350px;
       }
     }
   }
@@ -256,19 +277,21 @@ body {
       position: fixed;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       display: grid;
       place-content: center;
       line-height: 70px;
       font-size: 2rem;
       backdrop-filter: blur(25px) saturate(200%);
       -webkit-backdrop-filter: blur(25px) saturate(200%);
-      background-color: rgba(17, 25, 40, 0.7);
-      width: 80%;
-      height: 0;
+      background-color: rgba(77, 77, 77, 0.6);
+      width: 60%;
+      height: 60%;
+      visibility: hidden;
+      opacity: 0;
       overflow: hidden;
       border-radius: 10px;
-      box-shadow: 0px 0px 30px #7d7d7d;
+      box-shadow: 0px 0px 10px #F9B975;
       
       .nav-links {
         color: #fff;
@@ -278,6 +301,8 @@ body {
     .right-navbar-active {
       width: 80%;
       height: 80%;
+      visibility: visible;
+      opacity: 1;
     }
     .menu-close {
       display: block;
@@ -308,5 +333,15 @@ body {
   }
   .active {
     border-bottom: 2px white solid;
+  }
+}
+@media (width < 350px) {
+  .home {
+    .left-home {
+      padding-top: 30px;
+      img {
+        max-width: 250px;
+      }
+    }
   }
 }

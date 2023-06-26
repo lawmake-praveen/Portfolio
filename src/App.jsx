@@ -1,10 +1,9 @@
-import React from "react"
-import Navbar from './pages/components/Navbar'
-import { BrowserRouter } from 'react-router-dom'
-import AnimateRoutes from './pages/Animatepresence'
+import React from "react";
+import Navbar from "./pages/components/Navbar";
+import { BrowserRouter } from "react-router-dom";
+import AnimateRoutes from "./pages/Animatepresence";
 
 function App() {
-
   return (
     <div className="app">
       <BrowserRouter>
@@ -12,7 +11,7 @@ function App() {
         <AnimateRoutes />
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
