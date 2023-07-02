@@ -10,23 +10,27 @@ import {
   jquery,
   github,
   tailwind,
+  framer,
+  scss,
 } from "../assets";
 import Resume from "./components/Resume";
 import { motion } from "framer-motion";
 
 const About = () => {
   const skills = [
-    html,
-    css,
-    js,
-    react,
-    jquery,
-    github,
-    figma,
-    materialui,
-    bootstrap,
-    tailwind,
-  ];
+    {name : 'HTML', image: html},
+    {name : 'CSS', image: css},
+    {name : 'JavaScript', image: js},
+    {name : 'React', image: react},
+    {name : 'JQuery', image: jquery},
+    {name : 'GitHub', image: github},
+    {name : 'Figma', image: figma},
+    {name : 'Framer Motion', image: framer},
+    {name : 'Scss', image: scss},
+    {name : 'Material UI', image: materialui},
+    {name : 'Bootstrap', image: bootstrap},
+    {name : 'Tailwind CSS', image: tailwind},
+];
 
   return (
     <motion.div
@@ -47,8 +51,8 @@ const About = () => {
       <div className="skills">
         {skills.map((item) => {
           return (
-            <div key={item}>
-              <img src={item} alt={item} />
+            <div key={item.name} title={item.name}>
+              <img src={item.image} alt={item.name} />
             </div>
           );
         })}

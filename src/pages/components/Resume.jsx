@@ -1,6 +1,22 @@
 import React from "react";
 
 const Resume = () => {
+
+  const skills = [
+    "JavaScript",
+    "React",
+    "Html 5",
+    "Css 3",
+    "JQuery",
+    "Figma",
+    "Framer Motion",
+    "Github",
+    "Scss",
+    "Material UI",
+    "Tailwind",
+    "Bootstrap",
+  ];
+  
   return (
     <div>
       <div className="resume">
@@ -25,16 +41,11 @@ const Resume = () => {
         </p>
         <h3 className="side-heading">Skills and Knowledge:</h3>
         <p className="detail s-and-k">
-          <span>● JavaScript</span>
-          <span>● React</span>
-          <span>● Html 5</span>
-          <span>● Css 3</span>
-          <span>● JQuery</span>
-          <span>● Figma</span>
-          <span>● Github</span>
-          <span>● Material UI</span>
-          <span>● Tailwind</span>
-          <span>● Bootstrap</span>
+          {skills.map((item) => {
+            return (
+              <span key={item}>● {item}</span>
+            )
+          })}
         </p>
         <h3 className="side-heading">Certification:</h3>
         <div className="detail">
@@ -53,42 +64,51 @@ const Resume = () => {
         <h3 className="side-heading">Relevent Projects:</h3>
         <div className="detail">
           <p>
-            A Simple company website for a local{" "}
+            ● A Simple company website for a local{" "}
             <a href="https://v2-service.vercel.app/" target="_blank">
               painting and services company.
             </a>{" "}
-            Design and developedcompletely on my own
+            Design and developed completely on my own
           </p>
           <p>
-            A{" "}
+            ● A{" "}
             <a href="https://weather-app-praveen.vercel.app/" target="_blank">
               Weather App
             </a>{" "}
             to find the local weather in your city
           </p>
           <p>
-            A{" "}
+            ● A{" "}
             <a href="https://currency-app-praveen.vercel.app/" target="_blank">
               Currency Calculator App
             </a>{" "}
             to find foreign Exchange Rate
           </p>
           <p>
+            ● A{" "}
+            <a href="https://reactnotes-lawmake-praveen.vercel.app/" target="_blank">
+              React Notes App
+            </a>{" "}
+            to keep day to day notes
+          </p>
+          <p>
             In addition to that I have also developed a range of dynamic and
             interactive features and apps using Vanilla JavaScript, React and
-            APIs. These include{" "}
+            APIs. These include{' '}
             <a href="https://tic-tac-toe-praveen.vercel.app/" target="_blank">
-              Tic Tac Toe
+              Tic Tac Toe 
             </a>
-            ,
+            ,{' '}
             <a href="https://daily-news-praveen.vercel.app/" target="_blank">
               News App
             </a>
-            ,
+            ,{' '}
             <a href="https://todo-app-praveen.vercel.app/" target="_blank">
               To-do List
             </a>
-            , Password generator, Mathematics Quiz game and several other games
+            , <a href="https://plp-pictures-gallery.vercel.app/" target="_blank">
+              Picture Gallery
+            </a>, Password generator, Mathematics Quiz game and several other games
             and apps.
           </p>
         </div>
