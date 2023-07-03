@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Project = ({ content, link, linkName}) => {
+const Project = ({ content, link, appName}) => {
   return (
     <div className='project'>
       <p className="details">
         {content}
       </p>
       <a href={link} target='_blank'>
-        {linkName}
+        {appName}
       </a>
       <iframe src={link}></iframe>
     </div>
