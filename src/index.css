@@ -148,10 +148,12 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  height: auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 90px;
 }
 .projects .project {
-  width: 400px;
+  width: 360px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -167,7 +169,7 @@ body {
   color: #000;
 }
 .projects .project iframe {
-  width: 380px;
+  width: 340px;
   height: 500px;
   margin: 20px auto;
   border-radius: 10px;
@@ -305,6 +307,13 @@ body {
   }
   .about .skills {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .projects .project {
+    width: 320px;
+  }
+  .projects .project iframe {
+    width: 300px;
+    height: 400px;
   }
   .contact .form {
     display: flex;

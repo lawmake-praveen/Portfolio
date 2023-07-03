@@ -34,7 +34,7 @@ function Contact() {
           id="email"
           type="email"
           name="email"
-          placeholder="Your Email *"
+          placeholder="Email *"
           required
         />
         <input type="tel" name="phone" id="phone" placeholder="Mobile No" />
@@ -42,7 +42,7 @@ function Contact() {
         <textarea
           id="message"
           name="message"
-          placeholder="Your Message *"
+          placeholder="Write Something *"
           required
         />
         <ValidationError

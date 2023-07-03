@@ -151,10 +151,11 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  height: auto;
+  height: fit-content;
+  padding-top: 90px;
 
   .project {
-    width: 400px;
+    width: 360px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -170,7 +171,7 @@ body {
       color: #000;
     }
     iframe {
-      width: 380px;
+      width: 340px;
       height: 500px;
       margin: 20px auto;
       border-radius: 10px;
@@ -270,6 +271,7 @@ body {
       }
     }
   }
+
 }
 @media (width < 567px) {
   .navbar {
@@ -315,6 +317,16 @@ body {
   .about {
     .skills {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .projects {
+    .project {
+      width: 320px;
+
+      iframe {
+        width: 300px;
+        height: 400px;
+      }
     }
   }
   .contact {

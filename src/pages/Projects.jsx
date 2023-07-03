@@ -16,12 +16,12 @@ const Projects = () => {
         appName="All in one Weather App"
       />
       <Project
-        content="Keep all your Notes in one place"
+        content="Keep all your Notes in one place with react notes"
         link="https://reactnotes-lawmake-praveen.vercel.app/"
         appName="React Notes"
       />
       <Project
-        content="This Currency Converter app helps to know the exchange rate of foreign currency."
+        content="This Currency Converter app helps to know the foreign exchange rate."
         link="https://currency-app-praveen.vercel.app/"
         appName="Currency Calculator App"
       />
@@ -36,7 +36,7 @@ const Projects = () => {
         appName="V2 Service and Painting"
       />
       <Project
-        content="Explore images"
+        content="Explore thousands of images with photo gallery app"
         link="https://plp-pictures-gallery.vercel.app/"
         appName="Photo Gallery"
       />
