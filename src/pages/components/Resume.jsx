@@ -1,7 +1,8 @@
 import React from "react";
+import resumePdf from "../../assets/Resume - Lawmake Praveen.pdf";
+import { BsDownload } from "react-icons/bs";
 
 const Resume = () => {
-
   const skills = [
     "JavaScript",
     "React",
@@ -16,18 +17,24 @@ const Resume = () => {
     "Tailwind",
     "Bootstrap",
   ];
-  
+
   return (
     <div>
       <div className="resume">
-        <h1>Resume</h1>
+        <div className="download-resume"></div>
+        <h1>
+          Resume{" "}
+          <a href={resumePdf} target="_blank" download="Resume-Lawmake Praveen" title="Download Resume">
+              <BsDownload className="download-icon" />
+          </a>
+        </h1>
         <h2>Lawmake Praveen</h2>
         <div className="mail-phone">
           <a href="mailto:lawmakepraveen@gmail.com" target="_blank">
             lawmakepraveen@gmail.com
           </a>{" "}
           |&nbsp;
-          <a href="tel:6381376043" target="_blank">
+          <a href="tel:6381376043">
             6381376043
           </a>
         </div>
@@ -42,9 +49,7 @@ const Resume = () => {
         <h3 className="side-heading">Skills and Knowledge:</h3>
         <p className="detail s-and-k">
           {skills.map((item) => {
-            return (
-              <span key={item}>● {item}</span>
-            )
+            return <span key={item}>● {item}</span>;
           })}
         </p>
         <h3 className="side-heading">Certification:</h3>
@@ -86,7 +91,10 @@ const Resume = () => {
           </p>
           <p>
             ● A{" "}
-            <a href="https://reactnotes-lawmake-praveen.vercel.app/" target="_blank">
+            <a
+              href="https://reactnotes-lawmake-praveen.vercel.app/"
+              target="_blank"
+            >
               React Notes App
             </a>{" "}
             to keep day to day notes
@@ -94,21 +102,23 @@ const Resume = () => {
           <p>
             In addition to that I have also developed a range of dynamic and
             interactive features and apps using Vanilla JavaScript, React and
-            APIs. These include{' '}
+            APIs. These include{" "}
             <a href="https://tic-tac-toe-praveen.vercel.app/" target="_blank">
-              Tic Tac Toe 
+              Tic Tac Toe
             </a>
-            ,{' '}
+            ,{" "}
             <a href="https://daily-news-praveen.vercel.app/" target="_blank">
               News App
             </a>
-            ,{' '}
+            ,{" "}
             <a href="https://todo-app-praveen.vercel.app/" target="_blank">
               To-do List
             </a>
-            , <a href="https://plp-pictures-gallery.vercel.app/" target="_blank">
+            ,{" "}
+            <a href="https://plp-pictures-gallery.vercel.app/" target="_blank">
               Picture Gallery
-            </a>, Password generator, Mathematics Quiz game and several other games
+            </a>
+            , Password generator, Mathematics Quiz game and several other games
             and apps.
           </p>
         </div>

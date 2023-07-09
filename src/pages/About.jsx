@@ -18,19 +18,19 @@ import { motion } from "framer-motion";
 
 const About = () => {
   const skills = [
-    {name : 'HTML', image: html},
-    {name : 'CSS', image: css},
-    {name : 'JavaScript', image: js},
-    {name : 'React', image: react},
-    {name : 'JQuery', image: jquery},
-    {name : 'GitHub', image: github},
-    {name : 'Figma', image: figma},
-    {name : 'Framer Motion', image: framer},
-    {name : 'Scss', image: scss},
-    {name : 'Material UI', image: materialui},
-    {name : 'Bootstrap', image: bootstrap},
-    {name : 'Tailwind CSS', image: tailwind},
-];
+    { name: "HTML", image: html },
+    { name: "CSS", image: css },
+    { name: "JavaScript", image: js },
+    { name: "React", image: react },
+    { name: "JQuery", image: jquery },
+    { name: "GitHub", image: github },
+    { name: "Figma", image: figma },
+    { name: "Framer Motion", image: framer },
+    { name: "Scss", image: scss },
+    { name: "Material UI", image: materialui },
+    { name: "Bootstrap", image: bootstrap },
+    { name: "Tailwind CSS", image: tailwind },
+  ];
 
   return (
     <motion.div
@@ -39,7 +39,9 @@ const About = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: "100%" }}
     >
-      <h1>Greetings! I'm Lawmake Praveen</h1>
+      <h1>
+        <span className="greetings">Greetings!</span> from Praveen
+      </h1>
       <p>
         As a self-taught frontend developer, I have learned tools and languages
         like JavaScript, Html, Css, Bootstrap, jQuery, and web design

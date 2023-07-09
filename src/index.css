@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   margin: 0;
   background: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
 }
 
 * {
-  font-family: Poppins, Roboto, sans-serif;
+  font-family: Inter, Inter Tight, Poppins, sans-serif;
   outline: none;
   transition: all 0.3s;
   box-sizing: border-box;
@@ -36,8 +36,12 @@ body {
   z-index: 100;
 }
 .navbar .left-navbar {
-  font-size: 1.7rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
+  background-image: linear-gradient(109.6deg, rgb(53, 1, 106) 11.2%, rgb(2, 0, 4) 91.1%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .navbar .right-navbar .nav-links {
   color: #000;
@@ -91,10 +95,26 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
+.home .right-home h1 {
+  background-image: linear-gradient(109.6deg, rgb(36, 0, 72) 0%, rgb(2, 0, 4) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.home .right-home p {
+  line-height: 24px;
+}
 
 .about {
   height: -moz-fit-content;
   height: fit-content;
+}
+.about h1 .greetings {
+  background-image: linear-gradient(109.6deg, rgb(53, 1, 106) 11.2%, rgb(2, 0, 4) 91.1%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
 }
 .about .tech-stack {
   font-weight: 600;
@@ -118,13 +138,31 @@ body {
 .about .skills div img {
   margin: 20px 0;
 }
+.about .resume h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .resume h1 a {
+  display: grid;
+  place-content: center;
+}
+.about .resume h1 a .download-icon {
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 35px;
+  font-weight: 800;
+  margin-left: 10px;
+  color: #000;
+  background-color: #fff;
+}
 .about .resume h1,
 .about .resume h2,
 .about .resume .mail-phone {
   text-align: center;
 }
 .about .resume hr {
-  border-color: #000;
+  border-color: rgba(0, 0, 0, 0.4745098039);
 }
 .about .resume .mail-phone a {
   color: #000;
@@ -141,20 +179,21 @@ body {
 .projects {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
   gap: 20px;
   height: -moz-fit-content;
   height: fit-content;
-  padding-top: 90px;
+  padding: 90px;
 }
 .projects .project {
-  width: 360px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
   padding: 10px;
   border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7176470588);
 }
 .projects .project .details {
   color: #000;
@@ -162,12 +201,14 @@ body {
 }
 .projects .project a {
   text-align: center;
-  color: #000;
 }
-.projects .project iframe {
-  width: 340px;
-  height: 500px;
-  margin: 20px auto;
+.projects .project .image-container {
+  margin: 20px auto 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3960784314);
+}
+.projects .project .image-container img {
+  width: 280px;
   border-radius: 10px;
 }
 
@@ -263,6 +304,9 @@ body {
   .about .resume .s-and-k {
     grid-template-columns: repeat(3, 1fr);
   }
+  .projects {
+    padding: 90px 10px 90px 10px;
+  }
 }
 @media (width < 567px) {
   .navbar .right-navbar {
@@ -303,13 +347,6 @@ body {
   }
   .about .skills {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .projects .project {
-    width: 320px;
-  }
-  .projects .project iframe {
-    width: 300px;
-    height: 400px;
   }
   .contact .form {
     display: flex;

@@ -1,15 +1,17 @@
 import React from 'react'
 
-const Project = ({ content, link, appName}) => {
+const Project = ({ content, link, appLink, image }) => {
   return (
     <div className='project'>
       <p className="details">
         {content}
       </p>
       <a href={link} target='_blank'>
-        {appName}
+        {appLink}
       </a>
-      <iframe src={link}></iframe>
+      <div className="image-container">
+        <img src={image} />
+      </div>
     </div>
   )
 }
