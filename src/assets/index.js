@@ -11,3 +11,4 @@ export { default as tailwind } from "./tailwind-icon.png";
 export { default as myPic } from "./pic2.png";
 export { default as framer } from './framer-logo.png'
 export { default as scss } from './scss-logo.png'
+export { default as nodejs } from './nodejs-logo.png'

@@ -16,7 +16,7 @@ const Home = () => {
       <div className="right-home">
         <h1>Hi I'm Lawmake Praveen</h1>
         <p>
-          "Passionate web developer experienced in building modern, responsive
+          "Passionate web developer building modern, responsive
           websites and web applications. Proficient in HTML, CSS, JavaScript,
           and frameworks such as React. Committed to delivering high-quality
           code and user-friendly interfaces. Let's connect and collaborate!"

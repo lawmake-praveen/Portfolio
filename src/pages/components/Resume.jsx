@@ -6,11 +6,11 @@ const Resume = () => {
   const skills = [
     "JavaScript",
     "React",
-    "Html 5",
-    "Css 3",
+    "HTML5",
+    "CSS3",
+    "Node.js",
     "JQuery",
     "Figma",
-    "Framer Motion",
     "Github",
     "Scss",
     "Material UI",
@@ -22,29 +22,34 @@ const Resume = () => {
     <div>
       <div className="resume">
         <div className="download-resume"></div>
-        <h1>
-          Resume{" "}
-          <a href={resumePdf} target="_blank" download="Resume-Lawmake Praveen" title="Download Resume">
+        <div className="resume-heading">
+          <h1 className="resume-title">
+            Resume{" "}
+            <a
+              href={resumePdf}
+              target="_blank"
+              download="Resume-Lawmake Praveen"
+              title="Download Resume"
+            >
               <BsDownload className="download-icon" />
-          </a>
-        </h1>
-        <h2>Lawmake Praveen</h2>
+            </a>
+          </h1>
+          <h2 className="name-title">Lawmake Praveen</h2>
+        </div>
         <div className="mail-phone">
           <a href="mailto:lawmakepraveen@gmail.com" target="_blank">
             lawmakepraveen@gmail.com
           </a>{" "}
           |&nbsp;
-          <a href="tel:6381376043">
-            6381376043
-          </a>
+          <a href="tel:6381376043">6381376043</a>
         </div>
         <hr />
         <h3 className="side-heading">Profile Snapshot:</h3>
         <p className="detail">
-          A Self-guided developer with an ability to design and develop dynamic,
-          responsive, userfriendly and cross-browser capabilities websites.
-          Strong problem solving and communication skills, with a passion for
-          staying up to date with the latest technologies and trends.
+          A self-guided developer with an ability to design and develop dynamic,
+          responsive, user-friendly websites with cross-browser compatibility.
+          Staying up to date with the latest trends and quickly learning new
+          tools or languages is a plus.
         </p>
         <h3 className="side-heading">Skills and Knowledge:</h3>
         <p className="detail s-and-k">
@@ -73,7 +78,6 @@ const Resume = () => {
             <a href="https://v2-service.vercel.app/" target="_blank">
               painting and services company.
             </a>{" "}
-            Design and developed completely on my own
           </p>
           <p>
             ● A{" "}
@@ -122,7 +126,7 @@ const Resume = () => {
             and apps.
           </p>
         </div>
-        <h3>Known Languages:</h3>
+        <h3 className="side-heading">Known Languages:</h3>
         <div className="detail">
           <p>Tamil (Native)</p>
           <p>English (Working Proficency)</p>
