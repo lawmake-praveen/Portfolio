@@ -361,10 +361,10 @@ p {
 
 @keyframes round {
   0% {
-    rotate: 0deg;
+    transform: rotate(0deg);
   }
   100% {
-    rotate: 3600deg;
+    transform: rotate(3600deg);
   }
 }
 @media (max-width: 900px) {
