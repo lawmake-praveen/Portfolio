@@ -112,7 +112,27 @@ p {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 20px;
 
+  .left-home {
+    position: relative;
+
+    img {
+      border-radius: 50%;
+    }
+
+    .for-border {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      animation: round 30s infinite ease-in-out;
+      border: 7px ridge transparent;
+      border-color:rgb(53, 1, 106) rgba(2, 0, 4, 1);
+    }
+  }
   .right-home {
     h1 {
       @include textLinearGradient();
@@ -321,6 +341,16 @@ p {
         }
       }
     }
+  }
+}
+
+
+@keyframes round {
+  0%{
+    rotate: 0deg;
+  }
+  100%{
+    rotate: 3600deg;
   }
 }
 

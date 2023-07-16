@@ -1,5 +1,19 @@
 import React from "react";
-import { github, linkedin } from "../../assets/social-media";
+import  * as logos  from "../../assets/social-media";
+
+const socialLinks = (link, name) => {
+  return (
+    <div>
+      <a
+        href={link}
+        target="_blank"
+        className="box"
+      >
+        <img src={name} />
+      </a>
+    </div>
+  );
+};
 
 const Social = () => {
   return (
@@ -10,24 +24,9 @@ const Social = () => {
       exit={{ opacity: 0, x: "100%" }}
     >
       <span>Social: </span>
-      <div>
-        <a
-          href="https://github.com/lawmake-praveen"
-          target="_blank"
-          className="box"
-        >
-          <img src={github} alt="Github" />
-        </a>
-      </div>
-      <div>
-        <a
-          href="https://www.linkedin.com/in/lawmake-praveen-928a15239/"
-          target="_blank"
-          className="box"
-        >
-          <img src={linkedin} alt="LinkedIn" />
-        </a>
-      </div>
+      {socialLinks("https://github.com/lawmake-praveen", logos.github)}
+      {socialLinks("https://www.linkedin.com/in/lawmake-praveen-928a15239", logos.linkedin)}
+      {socialLinks("https://wa.me/6381376043", logos.whatsapp)}
     </div>
   );
 };

@@ -103,6 +103,24 @@ p {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 20px;
+}
+.home .left-home {
+  position: relative;
+}
+.home .left-home img {
+  border-radius: 50%;
+}
+.home .left-home .for-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  animation: round 30s infinite ease-in-out;
+  border: 7px ridge transparent;
+  border-color: rgb(53, 1, 106) rgb(2, 0, 4);
 }
 .home .right-home h1 {
   background-image: linear-gradient(109.6deg, rgb(53, 1, 106) 11.2%, rgb(2, 0, 4) 100%);
@@ -341,6 +359,14 @@ p {
   width: 50px;
 }
 
+@keyframes round {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 3600deg;
+  }
+}
 @media (max-width: 900px) {
   .home {
     flex-direction: column;

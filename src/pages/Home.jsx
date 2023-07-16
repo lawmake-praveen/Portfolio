@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { myPic } from "../assets";
+import { myPic } from "../assets/index";
 
 const Home = () => {
   return (
@@ -12,6 +12,7 @@ const Home = () => {
     >
       <div className="left-home">
         <img src={myPic} alt="My Pic" />
+        <div className="for-border"></div>
       </div>
       <div className="right-home">
         <h1>Hi I'm Lawmake Praveen</h1>
