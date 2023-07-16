@@ -419,6 +419,15 @@ p {
       }
     }
   }
+  .home {
+    flex-direction: column;
+
+    .left-home {
+      img {
+        max-width: 300px;
+      }
+    }
+  }
   .about {
     .skills {
       grid-template-columns: repeat(3, 1fr);
@@ -437,12 +446,22 @@ p {
     }
   }
 }
+@media (max-width: 425px) {
+  .home {
+    padding: 10vh 3% 2vh 3%;
+
+    .left-home {
+      img {
+        max-width: 250px;
+      }
+    }
+  }
+}
 @media (max-width: 350px) {
   .home {
     .left-home {
-      padding-top: 30px;
       img {
-        max-width: 250px;
+        max-width: 200px;
       }
     }
   }
