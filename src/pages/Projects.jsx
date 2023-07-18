@@ -1,7 +1,17 @@
 import React from "react";
 import Project from "./components/Project";
 import { motion } from "framer-motion";
-import { reactnotes, currency, pictures, news, tictactoe, todo, v2painting, weather } from '../assets/Project-screenshot/export'
+import {
+  reactnotes,
+  currency,
+  pictures,
+  news,
+  tictactoe,
+  todo,
+  v2painting,
+  weather,
+  portfolio,
+} from "../assets/Project-screenshot/export";
 
 const Projects = () => {
   return (
@@ -11,6 +21,12 @@ const Projects = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: "100%" }}
     >
+      <Project
+        content="A simple personal portfolio website to showcase my skills and projects"
+        link="https://lawmake-praveen.vercel.app/"
+        appLink="Personal Portfolio"
+        image={portfolio}
+      />
       <Project
         content="This Weather app helps to know the recent weather in your city."
         link="https://weather-app-praveen.vercel.app/"

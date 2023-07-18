@@ -277,6 +277,7 @@ p {
 }
 .projects .project .image-container img {
   width: 280px;
+  height: 500px;
   border-radius: 10px;
 }
 

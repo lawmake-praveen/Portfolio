@@ -130,7 +130,7 @@ p {
       border-radius: 50%;
       animation: round 30s infinite ease-in-out;
       border: 7px ridge transparent;
-      border-color:rgb(53, 1, 106) rgba(2, 0, 4, 1);
+      border-color: rgb(53, 1, 106) rgba(2, 0, 4, 1);
     }
   }
   .right-home {
@@ -266,6 +266,7 @@ p {
 
       img {
         width: 280px;
+        height: 500px;
         border-radius: 10px;
       }
     }
@@ -344,12 +345,11 @@ p {
   }
 }
 
-
 @keyframes round {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(3600deg);
   }
 }
