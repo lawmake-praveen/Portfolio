@@ -460,9 +460,15 @@ p {
   .home .left-home img {
     max-width: 250px;
   }
+  .home .right-home h1 {
+    font-size: 28px;
+  }
 }
 @media (max-width: 350px) {
   .home .left-home img {
     max-width: 200px;
+  }
+  .home .right-home h1 {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=index.css.map */

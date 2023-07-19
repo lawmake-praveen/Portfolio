@@ -466,6 +466,11 @@ p {
         max-width: 250px;
       }
     }
+    .right-home {
+      h1 {
+        font-size: 28px;
+      }
+    }
   }
 }
 @media (max-width: 350px) {
@@ -473,6 +478,11 @@ p {
     .left-home {
       img {
         max-width: 200px;
+      }
+    }
+    .right-home {
+      h1 {
+        font-size: 24px;
       }
     }
   }
