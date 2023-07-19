@@ -13,6 +13,8 @@ import {
   framer,
   scss,
   nodejs,
+  redux,
+  express,
 } from "../assets";
 import Resume from "./components/Resume";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -23,7 +25,9 @@ const About = () => {
     { name: "CSS", image: css },
     { name: "JavaScript", image: js },
     { name: "React.js", image: react },
+    { name: "Redux.js", image: redux },
     { name: "Node.js", image: nodejs },
+    { name: "Express.js", image: express },
     { name: "JQuery", image: jquery },
     { name: "GitHub", image: github },
     { name: "Figma", image: figma },
@@ -31,6 +35,7 @@ const About = () => {
     { name: "Framer Motion", image: framer },
     { name: "Material UI", image: materialui },
     { name: "Tailwind CSS", image: tailwind },
+    { name: "Bootstrap", image: bootstrap },
   ];
   const [windowWidth, setWindowWidth] = useState(window.innerWidth < 600);
 

@@ -12,3 +12,7 @@ export { default as myPic } from "./pic.png";
 export { default as framer } from './framer-logo.png'
 export { default as scss } from './scss-logo.png'
 export { default as nodejs } from './nodejs-logo.png'
+export { default as git } from './git.png'
+export { default as express } from './express.js-logo.png'
+export { default as mongodb } from './mongodb.png'
+export { default as redux } from './redux-logo.png'

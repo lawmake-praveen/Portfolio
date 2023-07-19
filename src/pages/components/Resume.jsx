@@ -5,11 +5,13 @@ import { BsDownload } from "react-icons/bs";
 const Resume = () => {
   const skills = [
     "JavaScript",
-    "React",
     "HTML5",
     "CSS3",
-    "Node.js",
     "JQuery",
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "Redux.js",
     "Figma",
     "Github",
     "Scss",
