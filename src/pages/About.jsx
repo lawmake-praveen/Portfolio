@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   bootstrap,
   html,
@@ -15,7 +15,7 @@ import {
   nodejs,
 } from "../assets";
 import Resume from "./components/Resume";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 const About = () => {
   const skills = [
@@ -32,37 +32,53 @@ const About = () => {
     { name: "Material UI", image: materialui },
     { name: "Tailwind CSS", image: tailwind },
   ];
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth < 600);
+
+  window.addEventListener("resize", () => {
+    setWindowWidth(window.innerWidth < 600);
+  });
+  const { scrollYProgress } = useScroll();
 
   return (
-    <motion.div
-      className="about"
-      initial={{ opacity: 0, x: "-100%" }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: "100%" }}
-    >
-      <h1>
-        <span className="greetings">Greetings!</span>
-      </h1>
-      <p>
-        As a self-taught web developer, I have learned tools and languages such as
-        JavaScript, React, HTML, CSS, Node.js and jQuery. Additionally, I have a
-        good understanding of UI/UX design. I have been learning these skills
-        and tools for the past eight months through online courses and now
-        looking to start my professional web developer career. I am excited to
-        connect with like-minded professionals to create stunning websites.
-      </p>
-      <h2 className="tech-stack">Tech Stack and Tools:</h2>
-      <div className="skills">
-        {skills.map((item) => {
-          return (
-            <div key={item.name} title={item.name}>
-              <img src={item.image} alt={item.name} />
-            </div>
-          );
-        })}
-      </div>
-      <Resume />
-    </motion.div>
+    <>
+      {windowWidth && (
+        <motion.div
+          style={{ scaleX: scrollYProgress }}
+          className="scroll-progress"
+        ></motion.div>
+      )}
+
+      <motion.div
+        className="about"
+        initial={{ opacity: 0, x: "-100%" }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: "100%" }}
+      >
+        <h1>
+          <span className="greetings">Greetings!</span>
+        </h1>
+        <p>
+          As a self-taught web developer, I have learned tools and languages
+          such as JavaScript, React, HTML, CSS, Node.js and jQuery.
+          Additionally, I have a good understanding of UI/UX design. I have been
+          learning these skills and tools for the past eight months through
+          online courses and now looking to start my professional web developer
+          career. I am excited to connect with like-minded professionals to
+          create stunning websites.
+        </p>
+        <h2 className="tech-stack">Tech Stack and Tools:</h2>
+        <div className="skills">
+          {skills.map((item) => {
+            return (
+              <div key={item.name} title={item.name}>
+                <img src={item.image} alt={item.name} />
+              </div>
+            );
+          })}
+        </div>
+        <Resume />
+      </motion.div>
+    </>
   );
 };
 

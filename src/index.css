@@ -25,6 +25,18 @@ p {
   line-height: 24px;
 }
 
+.scroll-progress {
+  position: fixed;
+  border-radius: 10px;
+  top: 8vh;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  transform-origin: 0%;
+  height: 3px;
+  z-index: 1000;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
