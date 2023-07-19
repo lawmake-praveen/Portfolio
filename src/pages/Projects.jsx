@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Project from "./components/Project";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import {
   reactnotes,
   currency,
@@ -15,6 +15,12 @@ import {
 
 const Projects = () => {
   const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 1000,
+    damping: 300,
+    restDelta: 0.001,
+    mass: 0.001,
+  });
   const [windowWidth, setWindowWidth] = useState(window.innerWidth < 600);
 
   window.addEventListener("resize", () => {
@@ -24,10 +30,7 @@ const Projects = () => {
   return (
     <>
       {windowWidth && (
-        <motion.div
-          style={{ scaleX: scrollYProgress }}
-          className="scroll-progress"
-        ></motion.div>
+        <motion.div style={{ scaleX }} className="scroll-progress"></motion.div>
       )}
 
       <motion.div

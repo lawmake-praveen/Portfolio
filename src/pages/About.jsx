@@ -15,7 +15,7 @@ import {
   nodejs,
 } from "../assets";
 import Resume from "./components/Resume";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const About = () => {
   const skills = [
@@ -38,14 +38,17 @@ const About = () => {
     setWindowWidth(window.innerWidth < 600);
   });
   const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+    mass: 0.001,
+  });
 
   return (
     <>
       {windowWidth && (
-        <motion.div
-          style={{ scaleX: scrollYProgress }}
-          className="scroll-progress"
-        ></motion.div>
+        <motion.div style={{ scaleX }} className="scroll-progress"></motion.div>
       )}
 
       <motion.div
