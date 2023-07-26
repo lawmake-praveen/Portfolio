@@ -267,9 +267,11 @@ p {
   padding: 90px;
 }
 .projects .project {
-  width: 300px;
+  width: 400px;
+  height: 340px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
   padding: 10px;
   border-radius: 10px;
@@ -281,6 +283,10 @@ p {
 }
 .projects .project a {
   text-align: center;
+  text-decoration: none;
+}
+.projects .project a:hover {
+  text-decoration: underline;
 }
 .projects .project .image-container {
   margin: 20px auto 0 auto;
@@ -288,8 +294,8 @@ p {
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3960784314);
 }
 .projects .project .image-container img {
-  width: 280px;
-  height: 500px;
+  width: 380px;
+  height: 200px;
   border-radius: 10px;
 }
 
@@ -462,6 +468,14 @@ p {
   }
   .home .right-home h1 {
     font-size: 28px;
+  }
+  .projects .project {
+    width: 320px;
+    height: 300px;
+  }
+  .projects .project .image-container img {
+    width: 300px;
+    height: 160px;
   }
 }
 @media (max-width: 350px) {
