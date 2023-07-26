@@ -22,7 +22,7 @@ export const projectsArray = [
   },
   {
     content: "A simple personal portfolio website to showcase my skills and projects",
-    link: "https://lawmake-praveen.vercel.app/",
+    link: "https://lawmake.vercel.app/",
     appLink: "Personal Portfolio",
     image: portfolio, 
   },
