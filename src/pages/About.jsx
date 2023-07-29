@@ -20,6 +20,8 @@ import Resume from "./components/Resume";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const About = () => {
+  const [showToolTip, setShowToolTip] = useState({});
+
   const skills = [
     { name: "HTML", image: html },
     { name: "CSS", image: css },
@@ -78,7 +80,14 @@ const About = () => {
         <div className="skills">
           {skills.map((item) => {
             return (
-              <div key={item.name} title={item.name}>
+              <div
+                key={item.name}
+                onMouseEnter={(prev) => setShowToolTip({...prev, [item.name]: true})}
+                onMouseLeave={(prev) => setShowToolTip({...prev, [item.name]: false})}
+              >
+                <span className={`tooltip ${showToolTip[item.name] && "show-tooltip"}`}>
+                  {item.name}
+                </span>
                 <img src={item.image} alt={item.name} />
               </div>
             );
