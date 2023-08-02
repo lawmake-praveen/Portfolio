@@ -293,7 +293,7 @@ p {
 }
 .projects .project {
   width: 400px;
-  height: 340px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -496,7 +496,6 @@ p {
   }
   .projects .project {
     width: 320px;
-    height: 300px;
   }
   .projects .project .image-container img {
     width: 300px;
