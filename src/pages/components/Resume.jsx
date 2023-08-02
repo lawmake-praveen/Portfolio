@@ -76,17 +76,18 @@ const Resume = () => {
         <h3 className="side-heading">Relevent Projects:</h3>
         <div className="detail">
           <p>
-            ● A Simple company website for a local{" "}
-            <a href="https://v2-service.vercel.app/" target="_blank">
-              painting and services company.
+            ● An{" "}
+            <a href="https://shopease-store.vercel.app/" target="_blank">
+              E-Commerce Website
             </a>{" "}
+            to browse and shop.
           </p>
           <p>
-            ● A{" "}
-            <a href="https://weather-app-praveen.vercel.app/" target="_blank">
-              Weather App
+            ● An{" "}
+            <a href="https://activities-tab.vercel.app/" target="_blank">
+              Activity Tab
             </a>{" "}
-            to find the local weather in your city
+            to Create, Edit, Group and Delete your day to day Activities.
           </p>
           <p>
             ● A{" "}
@@ -117,8 +118,8 @@ const Resume = () => {
               News App
             </a>
             ,{" "}
-            <a href="https://todo-app-praveen.vercel.app/" target="_blank">
-              To-do List
+            <a href="https://weather-app-praveen.vercel.app/" target="_blank">
+              Weather App
             </a>
             ,{" "}
             <a href="https://plp-pictures-gallery.vercel.app/" target="_blank">
