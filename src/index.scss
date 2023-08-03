@@ -552,6 +552,11 @@ p {
     }
   }
   .projects {
+    .projects-disclaimer {
+      .disclaimer {
+        font-size: 0.9rem;
+      }
+    }
     .all-projects {
       .project {
         width: auto;
@@ -576,6 +581,13 @@ p {
     .right-home {
       h1 {
         font-size: 24px;
+      }
+    }
+  }
+  .projects {
+    .projects-disclaimer {
+      .disclaimer {
+        font-size: 0.8rem;
       }
     }
   }
