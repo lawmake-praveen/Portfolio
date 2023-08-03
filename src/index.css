@@ -282,6 +282,51 @@ p {
 }
 
 .projects {
+  padding: 9vh 90px 20px 90px;
+}
+.projects .projects-disclaimer {
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 15px;
+  margin: 10px 0;
+  height: 30px;
+}
+.projects .projects-disclaimer .disclaimer {
+  background-color: #fff;
+  padding: 5px 15px;
+  text-align: left;
+  border-radius: 7px;
+  z-index: 2;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  max-width: 450px;
+  box-shadow: 0px 0px 5px rgb(228, 228, 228);
+}
+.projects .projects-disclaimer .disclaimer::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -11px;
+  top: 25%;
+  transform: rotate(45deg);
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 3px;
+}
+.projects .projects-disclaimer .show-dis {
+  opacity: 1;
+  visibility: visible;
+}
+.projects .projects-disclaimer .diclaimer-icon {
+  font-size: 1.5rem;
+  display: grid;
+  place-content: center;
+}
+.projects .all-projects {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
@@ -289,9 +334,8 @@ p {
   gap: 20px;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 90px;
 }
-.projects .project {
+.projects .all-projects .project {
   width: 400px;
   height: auto;
   display: flex;
@@ -302,23 +346,23 @@ p {
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7176470588);
 }
-.projects .project .details {
+.projects .all-projects .project .details {
   color: #000;
   text-align: center;
 }
-.projects .project a {
+.projects .all-projects .project a {
   text-align: center;
   text-decoration: none;
 }
-.projects .project a:hover {
+.projects .all-projects .project a:hover {
   text-decoration: underline;
 }
-.projects .project .image-container {
+.projects .all-projects .project .image-container {
   margin: 20px auto 0 auto;
   border-radius: 10px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3960784314);
 }
-.projects .project .image-container img {
+.projects .all-projects .project .image-container img {
   width: 380px;
   height: 200px;
   border-radius: 10px;
@@ -425,7 +469,7 @@ p {
     grid-template-columns: repeat(3, 1fr);
   }
   .projects {
-    padding: 90px 10px 90px 10px;
+    padding: 9vh 20px 90px 20px;
   }
 }
 @media (max-width: 567px) {
@@ -494,10 +538,10 @@ p {
   .home .right-home h1 {
     font-size: 28px;
   }
-  .projects .project {
-    width: 320px;
+  .projects .all-projects .project {
+    width: auto;
   }
-  .projects .project .image-container img {
+  .projects .all-projects .project .image-container img {
     width: 300px;
     height: 160px;
   }
