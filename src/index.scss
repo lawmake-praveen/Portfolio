@@ -19,6 +19,13 @@
   width: -ms-fit-content;
 } 
 
+::selection {
+  background: blue;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+
 //Scrollbar Settings
 ::-webkit-scrollbar {
   background: #f7ce68;

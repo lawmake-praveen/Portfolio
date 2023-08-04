@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+::-moz-selection {
+  background: blue;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+::selection {
+  background: blue;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
 ::-webkit-scrollbar {
   background: #f7ce68;
   width: 8px;
