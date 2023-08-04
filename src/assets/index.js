@@ -3,7 +3,7 @@ export { default as html } from "./html-logo.png";
 export { default as css } from "./css-logo.png";
 export { default as figma } from "./logos_figma.png";
 export { default as materialui } from "./material-ui.png";
-export { default as react } from "./react-logo.png";
+export { default as react } from "./react-icon.png";
 export { default as js } from "./js-logo.png";
 export { default as jquery } from "./jquery-logo.png";
 export { default as github } from "./github-icon.png";

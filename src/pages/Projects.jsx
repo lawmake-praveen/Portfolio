@@ -31,9 +31,13 @@ const Projects = () => {
         exit={{ opacity: 0, x: "100%" }}
       >
         <div className="projects-disclaimer">
-          <span className={`disclaimer ${showDisclaimer && 'show-dis'}`}>
-            All these projects have been completely designed and developed by
-            me, without any external help.
+          <span
+            className={`disclaimer ${showDisclaimer && "show-dis"}`}
+            onMouseEnter={() => setShowDisclaimer(true)}
+            onMouseLeave={() => setShowDisclaimer(false)}
+          >
+            All these projects have been entirely designed and developed by me,
+            without any copied and pasted code or methods.
           </span>
           <span
             className="diclaimer-icon"

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+//Text Gradient for Headings
 @mixin textLinearGradient {
   background-image: linear-gradient(
     109.6deg,
@@ -16,21 +17,25 @@
   width: -moz-fit-content; 
   width: -webkit-fit-content;
   width: -ms-fit-content;
-}
+} 
 
 //Scrollbar Settings
 ::-webkit-scrollbar {
   background: #f7ce68;
-  width: 10px;
+  width: 8px;
+  height: 0px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
   border-radius: 10px;
 }
 
+$bg-color: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+
+
 body {
   margin: 0;
-  background: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  background: $bg-color;
 }
 * {
   font-family: Inter, sans-serif;
@@ -39,7 +44,7 @@ body {
   box-sizing: border-box;
 }
 p {
-  line-height: 24px;
+  line-height: 180%;
 }
 .scroll-progress {
   position: fixed;
@@ -102,7 +107,7 @@ p {
   }
 }
 .scrolled {
-  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  background-image: $bg-color;
   box-shadow: 0px 0px 6px #0000005a;
 }
 .home,
@@ -111,8 +116,7 @@ p {
 .contact,
 .message-sent {
   height: 100vh;
-  background-color: #fbab7e;
-  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  background-image: $bg-color;
   padding: 8vh 2%;
   transition: all 1s;
 }
@@ -199,13 +203,12 @@ p {
       .show-tooltip {
         visibility: visible;
         opacity: 1;
-        transform: scale(110%);
       }
       img {
         margin: 20px 0;
       }
       &:hover {
-        box-shadow: 0px 0px 10px #fff;
+        box-shadow: 0px 0px 4px #fff;
       }
     }
   }
@@ -479,7 +482,7 @@ p {
       place-content: center;
       line-height: 70px;
       font-size: 2rem;
-      background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+      background-image: $bg-color;
       width: 60%;
       height: 60%;
       visibility: hidden;
