@@ -94,6 +94,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: default;
+  color: #000;
 }
 .navbar .menu-close .menu {
   display: none;
@@ -155,6 +156,9 @@ p {
   width: -moz-fit-content;
   width: -ms-fit-content;
 }
+.home .right-home .intro {
+  color: #000;
+}
 
 .about {
   height: -moz-fit-content;
@@ -170,6 +174,9 @@ p {
   width: -moz-fit-content;
   width: -ms-fit-content;
   font-size: 3rem;
+}
+.about p {
+  color: #000;
 }
 .about .tech-stack {
   font-weight: 600;
@@ -275,6 +282,7 @@ p {
 .about .resume h2,
 .about .resume .mail-phone {
   text-align: center;
+  color: #000;
 }
 .about .resume hr {
   border-color: rgba(0, 0, 0, 0.4745098039);
@@ -293,6 +301,8 @@ p {
 
 .projects {
   padding: 9vh 90px 20px 90px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .projects .projects-disclaimer {
   text-align: right;
@@ -305,7 +315,8 @@ p {
 }
 .projects .projects-disclaimer .disclaimer {
   background-color: #fff;
-  padding: 5px 15px;
+  color: #000;
+  padding: 6px 15px;
   text-align: left;
   border-radius: 7px;
   z-index: 2;
@@ -313,7 +324,7 @@ p {
   opacity: 0;
   visibility: hidden;
   max-width: 450px;
-  box-shadow: 0px 0px 5px rgb(228, 228, 228);
+  box-shadow: 0px 0px 2px rgb(228, 228, 228);
 }
 .projects .projects-disclaimer .disclaimer::after {
   content: "";
@@ -332,6 +343,7 @@ p {
   visibility: visible;
 }
 .projects .projects-disclaimer .diclaimer-icon {
+  color: #000;
   font-size: 1.5rem;
   display: grid;
   place-content: center;
@@ -342,8 +354,6 @@ p {
   align-items: baseline;
   flex-wrap: wrap;
   gap: 20px;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 .projects .all-projects .project {
   width: 400px;
@@ -499,7 +509,7 @@ p {
     opacity: 0;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 10px 10px 1px 200px rgba(0, 0, 0, 0.4745098039);
+    box-shadow: 10px 10px 1px 200px rgba(0, 0, 0, 0.6588235294);
   }
   .navbar .right-navbar .nav-links {
     text-align: center;

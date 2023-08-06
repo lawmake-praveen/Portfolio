@@ -38,7 +38,9 @@
 }
 
 $bg-color: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
-
+$text: #000;
+$text-bg: #fff;
+$box: #0000005a;
 
 body {
   margin: 0;
@@ -85,7 +87,7 @@ p {
   }
   .right-navbar {
     .nav-links {
-      color: #000;
+      color: $text;
       text-decoration: none;
       margin: 0 10px;
       padding: 1px;
@@ -104,6 +106,7 @@ p {
       left: 50%;
       transform: translate(-50%, -50%);
       cursor: default;
+      color: $text;
     }
     .menu {
       display: none;
@@ -115,7 +118,7 @@ p {
 }
 .scrolled {
   background-image: $bg-color;
-  box-shadow: 0px 0px 6px #0000005a;
+  box-shadow: 0px 0px 6px $box;
 }
 .home,
 .about,
@@ -128,7 +131,7 @@ p {
   transition: all 1s;
 }
 .active {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid $text;
 }
 .home {
   display: flex;
@@ -159,6 +162,9 @@ p {
     h1 {
       @include textLinearGradient();
     }
+    .intro {
+      color: $text;
+    }
   }
 }
 .about {
@@ -169,6 +175,9 @@ p {
       @include textLinearGradient();
       font-size: 3rem;
     }
+  }
+  p {
+    color: $text;
   }
   .tech-stack {
     font-weight: 600;
@@ -259,13 +268,14 @@ p {
     h2,
     .mail-phone {
       text-align: center;
+      color: $text;
     }
     hr {
       border-color: #00000079;
     }
     .mail-phone {
       a {
-        color: #000;
+        color: $text;
       }
     }
     .s-and-k {
@@ -275,13 +285,14 @@ p {
     }
     .detail {
       a {
-        color: #000;
+        color: $text;
       }
     }
   }
 }
 .projects {
   padding: 9vh 90px 20px 90px;
+  height: fit-content;
 
   .projects-disclaimer {
     text-align: right;
@@ -293,8 +304,9 @@ p {
     height: 30px;
   
     .disclaimer {
-      background-color: #fff;
-      padding: 5px 15px;
+      background-color: $text-bg;
+      color: $text;
+      padding: 6px 15px;
       text-align: left;
       border-radius: 7px;
       z-index: 2;
@@ -302,7 +314,7 @@ p {
       opacity: 0;
       visibility: hidden;
       max-width: 450px;
-      box-shadow: 0px 0px 5px rgb(228, 228, 228);
+      box-shadow: 0px 0px 2px rgb(228, 228, 228);
 
       &::after {
         content: '';
@@ -312,7 +324,7 @@ p {
         right: -11px;
         top: 25%;
         transform: rotate(45deg);
-        background-color: #fff;
+        background-color: $text-bg;
         z-index: 1;
         border-radius: 3px;
       }
@@ -322,6 +334,7 @@ p {
       visibility: visible;
     }
     .diclaimer-icon {
+      color: $text;
       font-size: 1.5rem;
       display: grid;
       place-content: center;
@@ -333,7 +346,6 @@ p {
     align-items: baseline;
     flex-wrap: wrap;
     gap: 20px;
-    height: fit-content;
   
     .project {
       width: 400px;
@@ -341,13 +353,13 @@ p {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background-color: #fff;
+      background-color: $text-bg;
       padding: 10px;
       border-radius: 10px;
       box-shadow: 0px 0px 5px #ffffffb7;
   
       .details {
-        color: #000;
+        color: $text;
         text-align: center;
       }
       a {
@@ -496,7 +508,7 @@ p {
       opacity: 0;
       overflow: hidden;
       border-radius: 10px;
-      box-shadow: 10px 10px 1px 200px #00000079;
+      box-shadow: 10px 10px 1px 200px #000000a8;
 
       .nav-links {
         text-align: center;
