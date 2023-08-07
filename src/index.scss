@@ -2,10 +2,15 @@
 
 //Text Gradient for Headings
 @mixin textLinearGradient {
+  // background-image: linear-gradient(
+  //   109.6deg,
+  //   rgb(53, 1, 106) 11.2%,
+  //   rgba(2, 0, 4, 1) 100%
+  // );
   background-image: linear-gradient(
     109.6deg,
-    rgb(53, 1, 106) 11.2%,
-    rgba(2, 0, 4, 1) 100%
+    rgb(75, 4, 147) 11.2%,
+    rgb(168, 32, 134) 100%
   );
 
   background-clip: text;
@@ -17,7 +22,18 @@
   width: -moz-fit-content; 
   width: -webkit-fit-content;
   width: -ms-fit-content;
-} 
+}
+
+// $bg-color: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+$bg-color: #0B1121;
+$text: #fff;
+$text-bg: #0B1121;
+$box: #0000005a;
+$project-link: rgb(79, 79, 255);
+
+$effect-1: #0C253B;
+$effect-2: #2A1F3B;
+
 
 ::selection {
   background: blue;
@@ -25,22 +41,17 @@
   -webkit-text-fill-color: #fff;
 }
 
-
 //Scrollbar Settings
 ::-webkit-scrollbar {
-  background: #f7ce68;
+  background: $bg-color;
   width: 8px;
   height: 0px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
-$bg-color: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
-$text: #000;
-$text-bg: #fff;
-$box: #0000005a;
 
 body {
   margin: 0;
@@ -63,7 +74,7 @@ p {
   right: 0;
   background-color: #fff;
   transform-origin: 0%;
-  height: 3px;
+  height: 2px;
   z-index: 1000;
 }
 .navbar {
@@ -76,7 +87,7 @@ p {
   top: 0;
   right: 0;
   left: 0;
-  background-color: transparent;
+  background-color: $bg-color;
   font-size: 1.1rem;
   z-index: 100;
 
@@ -159,11 +170,29 @@ p {
     }
   }
   .right-home {
+    position: relative;
+    z-index: 2;
+
     h1 {
       @include textLinearGradient();
     }
     .intro {
       color: $text;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: radial-gradient(at 50% 50%, $effect-1 0%, rgba(0,0,0,0) 60%);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: rotate(20deg);
+      z-index: -1;
+      transition: all 1s;
+    }
+    &:hover::before {
+      background: radial-gradient(at 50% 50%, $effect-1 0%, rgba(0,0,0,0) 70%);
     }
   }
 }
@@ -365,6 +394,7 @@ p {
       a {
         text-align: center;
         text-decoration: none;
+        color: $project-link;
   
         &:hover {
           text-decoration: underline;
@@ -436,6 +466,7 @@ p {
     span {
       font-size: 1.5rem;
       font-weight: 700;
+      color: $text;
     }
     div {
       width: 70px;

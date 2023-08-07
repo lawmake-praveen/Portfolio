@@ -11,19 +11,19 @@
 }
 
 ::-webkit-scrollbar {
-  background: #f7ce68;
+  background: #0B1121;
   width: 8px;
   height: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 body {
   margin: 0;
-  background: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  background: #0B1121;
 }
 
 * {
@@ -45,7 +45,7 @@ p {
   right: 0;
   background-color: #fff;
   transform-origin: 0%;
-  height: 3px;
+  height: 2px;
   z-index: 1000;
 }
 
@@ -59,14 +59,14 @@ p {
   top: 0;
   right: 0;
   left: 0;
-  background-color: transparent;
+  background-color: #0B1121;
   font-size: 1.1rem;
   z-index: 100;
 }
 .navbar .left-navbar {
   font-size: 2rem;
   font-weight: 700;
-  background-image: linear-gradient(109.6deg, rgb(53, 1, 106) 11.2%, rgb(2, 0, 4) 100%);
+  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -76,7 +76,7 @@ p {
   width: -ms-fit-content;
 }
 .navbar .right-navbar .nav-links {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   margin: 0 10px;
   padding: 1px;
@@ -94,7 +94,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: default;
-  color: #000;
+  color: #fff;
 }
 .navbar .menu-close .menu {
   display: none;
@@ -104,7 +104,7 @@ p {
 }
 
 .scrolled {
-  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  background-image: #0B1121;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3529411765);
 }
 
@@ -114,13 +114,13 @@ p {
 .contact,
 .message-sent {
   height: 100vh;
-  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  background-image: #0B1121;
   padding: 8vh 2%;
   transition: all 1s;
 }
 
 .active {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #fff;
 }
 
 .home {
@@ -146,8 +146,12 @@ p {
   border: 7px ridge transparent;
   border-color: rgb(53, 1, 106) rgb(2, 0, 4);
 }
+.home .right-home {
+  position: relative;
+  z-index: 2;
+}
 .home .right-home h1 {
-  background-image: linear-gradient(109.6deg, rgb(53, 1, 106) 11.2%, rgb(2, 0, 4) 100%);
+  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -157,7 +161,22 @@ p {
   width: -ms-fit-content;
 }
 .home .right-home .intro {
-  color: #000;
+  color: #fff;
+}
+.home .right-home::before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(at 50% 50%, #0C253B 0%, rgba(0, 0, 0, 0) 60%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: rotate(20deg);
+  z-index: -1;
+  transition: all 1s;
+}
+.home .right-home:hover::before {
+  background: radial-gradient(at 50% 50%, #0C253B 0%, rgba(0, 0, 0, 0) 70%);
 }
 
 .about {
@@ -165,7 +184,7 @@ p {
   height: fit-content;
 }
 .about h1 .greetings {
-  background-image: linear-gradient(109.6deg, rgb(53, 1, 106) 11.2%, rgb(2, 0, 4) 100%);
+  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -176,11 +195,11 @@ p {
   font-size: 3rem;
 }
 .about p {
-  color: #000;
+  color: #fff;
 }
 .about .tech-stack {
   font-weight: 600;
-  background-image: linear-gradient(109.6deg, rgb(53, 1, 106) 11.2%, rgb(2, 0, 4) 100%);
+  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -241,7 +260,7 @@ p {
 .about .resume .resume-heading .resume-title,
 .about .resume .resume-heading .name-title {
   margin: 10px 0;
-  background-image: linear-gradient(109.6deg, rgb(53, 1, 106) 11.2%, rgb(2, 0, 4) 100%);
+  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -251,7 +270,7 @@ p {
   width: -ms-fit-content;
 }
 .about .resume .side-heading {
-  background-image: linear-gradient(109.6deg, rgb(53, 1, 106) 11.2%, rgb(2, 0, 4) 100%);
+  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -282,13 +301,13 @@ p {
 .about .resume h2,
 .about .resume .mail-phone {
   text-align: center;
-  color: #000;
+  color: #fff;
 }
 .about .resume hr {
   border-color: rgba(0, 0, 0, 0.4745098039);
 }
 .about .resume .mail-phone a {
-  color: #000;
+  color: #fff;
 }
 .about .resume .s-and-k {
   display: grid;
@@ -296,7 +315,7 @@ p {
   grid-template-columns: repeat(4, 1fr);
 }
 .about .resume .detail a {
-  color: #000;
+  color: #fff;
 }
 
 .projects {
@@ -314,8 +333,8 @@ p {
   height: 30px;
 }
 .projects .projects-disclaimer .disclaimer {
-  background-color: #fff;
-  color: #000;
+  background-color: #0B1121;
+  color: #fff;
   padding: 6px 15px;
   text-align: left;
   border-radius: 7px;
@@ -334,7 +353,7 @@ p {
   right: -11px;
   top: 25%;
   transform: rotate(45deg);
-  background-color: #fff;
+  background-color: #0B1121;
   z-index: 1;
   border-radius: 3px;
 }
@@ -343,7 +362,7 @@ p {
   visibility: visible;
 }
 .projects .projects-disclaimer .diclaimer-icon {
-  color: #000;
+  color: #fff;
   font-size: 1.5rem;
   display: grid;
   place-content: center;
@@ -361,18 +380,19 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: #0B1121;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7176470588);
 }
 .projects .all-projects .project .details {
-  color: #000;
+  color: #fff;
   text-align: center;
 }
 .projects .all-projects .project a {
   text-align: center;
   text-decoration: none;
+  color: rgb(79, 79, 255);
 }
 .projects .all-projects .project a:hover {
   text-decoration: underline;
@@ -447,6 +467,7 @@ p {
 .message-sent .social span {
   font-size: 1.5rem;
   font-weight: 700;
+  color: #fff;
 }
 .contact .social div,
 .message-sent .social div {
@@ -502,7 +523,7 @@ p {
     place-content: center;
     line-height: 70px;
     font-size: 2rem;
-    background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+    background-image: #0B1121;
     width: 60%;
     height: 60%;
     visibility: hidden;
