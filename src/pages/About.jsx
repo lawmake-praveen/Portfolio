@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import {
   bootstrap,
-  html,
   css,
+  expressjs,
+  html,
   js,
   react,
   figma,
-  materialui,
+  mui,
   jquery,
   git,
   github,
@@ -15,8 +16,7 @@ import {
   scss,
   nodejs,
   redux,
-  express,
-} from "../assets";
+} from "../assets/tech-stack/tech-stack-export";
 import Resume from "./components/Resume";
 import { motion, useScroll, useSpring } from "framer-motion";
 
@@ -30,14 +30,14 @@ const About = () => {
     { name: "React.js", image: react },
     { name: "Redux.js", image: redux },
     { name: "Node.js", image: nodejs },
-    { name: "Express.js", image: express },
+    { name: "Express.js", image: expressjs },
     { name: "JQuery", image: jquery },
     { name: "Git", image: git },
     { name: "GitHub", image: github },
     { name: "Figma", image: figma },
     { name: "Scss", image: scss },
     { name: "Framer Motion", image: framer },
-    { name: "Material UI", image: materialui },
+    { name: "Material UI", image: mui },
     { name: "Tailwind CSS", image: tailwind },
     { name: "Bootstrap", image: bootstrap },
   ];

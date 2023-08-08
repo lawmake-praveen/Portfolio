@@ -2,16 +2,7 @@
 
 //Text Gradient for Headings
 @mixin textLinearGradient {
-  // background-image: linear-gradient(
-  //   109.6deg,
-  //   rgb(53, 1, 106) 11.2%,
-  //   rgba(2, 0, 4, 1) 100%
-  // );
-  background-image: linear-gradient(
-    109.6deg,
-    rgb(75, 4, 147) 11.2%,
-    rgb(168, 32, 134) 100%
-  );
+  background: linear-gradient(45deg, #ffffff, #0379e0);
 
   background-clip: text;
 
@@ -19,20 +10,17 @@
   color: transparent;
 
   width: fit-content;
-  width: -moz-fit-content; 
+  width: -moz-fit-content;
   width: -webkit-fit-content;
   width: -ms-fit-content;
 }
 
 // $bg-color: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
-$bg-color: #0B1121;
+$bg-color: url(../src/assets/bg-image.jpg);
 $text: #fff;
-$text-bg: #0B1121;
-$box: #0000005a;
-$project-link: rgb(79, 79, 255);
-
-$effect-1: #0C253B;
-$effect-2: #2A1F3B;
+$text-bg: #0b1121;
+$box: #ffffff8f;
+$link: rgb(157, 157, 224);
 
 
 ::selection {
@@ -51,7 +39,6 @@ $effect-2: #2A1F3B;
   background-color: #fff;
   border-radius: 6px;
 }
-
 
 body {
   margin: 0;
@@ -87,7 +74,7 @@ p {
   top: 0;
   right: 0;
   left: 0;
-  background-color: $bg-color;
+  background: $bg-color;
   font-size: 1.1rem;
   z-index: 100;
 
@@ -128,8 +115,7 @@ p {
   }
 }
 .scrolled {
-  background-image: $bg-color;
-  box-shadow: 0px 0px 6px $box;
+  box-shadow: 0px 0px 3px #ffffff44;
 }
 .home,
 .about,
@@ -137,7 +123,7 @@ p {
 .contact,
 .message-sent {
   height: 100vh;
-  background-image: $bg-color;
+  background: $bg-color cover;
   padding: 8vh 2%;
   transition: all 1s;
 }
@@ -165,8 +151,8 @@ p {
       width: 100%;
       border-radius: 50%;
       animation: round 30s infinite ease-in-out;
-      border: 7px ridge transparent;
-      border-color: rgb(53, 1, 106) rgba(2, 0, 4, 1);
+      border: 3px ridge transparent;
+      border-color: #0163b9 #002648;
     }
   }
   .right-home {
@@ -178,21 +164,6 @@ p {
     }
     .intro {
       color: $text;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      background: radial-gradient(at 50% 50%, $effect-1 0%, rgba(0,0,0,0) 60%);
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      transform: rotate(20deg);
-      z-index: -1;
-      transition: all 1s;
-    }
-    &:hover::before {
-      background: radial-gradient(at 50% 50%, $effect-1 0%, rgba(0,0,0,0) 70%);
     }
   }
 }
@@ -297,14 +268,15 @@ p {
     h2,
     .mail-phone {
       text-align: center;
-      color: $text;
+      color: $link;
     }
     hr {
       border-color: #00000079;
     }
     .mail-phone {
       a {
-        color: $text;
+        color: $link;
+        text-decoration: none;
       }
     }
     .s-and-k {
@@ -314,7 +286,8 @@ p {
     }
     .detail {
       a {
-        color: $text;
+        color: $link;
+        text-decoration: none;
       }
     }
   }
@@ -331,7 +304,7 @@ p {
     gap: 15px;
     margin: 10px 0;
     height: 30px;
-  
+
     .disclaimer {
       background-color: $text-bg;
       color: $text;
@@ -346,7 +319,7 @@ p {
       box-shadow: 0px 0px 2px rgb(228, 228, 228);
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 25px;
         height: 25px;
@@ -375,18 +348,18 @@ p {
     align-items: baseline;
     flex-wrap: wrap;
     gap: 20px;
-  
+
     .project {
       width: 400px;
       height: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background-color: $text-bg;
+      background: transparent;
       padding: 10px;
       border-radius: 10px;
-      box-shadow: 0px 0px 5px #ffffffb7;
-  
+      box-shadow: 0px 0px 3px #ffffff88;
+
       .details {
         color: $text;
         text-align: center;
@@ -394,8 +367,8 @@ p {
       a {
         text-align: center;
         text-decoration: none;
-        color: $project-link;
-  
+        color: $link;
+
         &:hover {
           text-decoration: underline;
         }
@@ -404,7 +377,7 @@ p {
         margin: 20px auto 0 auto;
         border-radius: 10px;
         box-shadow: 0px 0px 6px #00000065;
-  
+
         img {
           width: 380px;
           height: 200px;
@@ -415,12 +388,20 @@ p {
   }
 }
 .message-sent {
+  height: 100vh;
+  text-align: center;
   font-size: 1.5rem;
   display: grid;
   place-content: center;
+  color: $text;
+}
+.contact {
+  height: fit-content;
 }
 .contact,
 .message-sent {
+  padding: 8vh 2% 10px 2%;
+
   .form {
     padding: 6% 2%;
     width: 80%;
@@ -441,6 +422,22 @@ p {
       width: 100%;
       border-radius: 10px;
       border: none;
+      background: transparent;
+      box-shadow: 0px 0px 2px $box;
+      color: $text;
+
+      &::placeholder {
+        color: $box;
+      }
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: #ffffff;
+      box-shadow: 0px 0px 2px $box;
     }
     textarea {
       height: 150px;
@@ -451,8 +448,16 @@ p {
       height: 40px;
       width: 200px;
       border-radius: 10px;
-      border: none;
+      border: 1px solid $box;
       font-size: 1.1rem;
+      background: $bg-color;
+      color: $text;
+      box-shadow: 3px 3px 0px #fff;
+
+      &:active {
+        box-shadow: 0px 0px 0px #fff;
+        transform: translate(3px, 3px);
+      }
     }
   }
   .social {
@@ -461,7 +466,7 @@ p {
     align-items: center;
     gap: 13px;
     width: 75%;
-    margin: auto;
+    margin: 40px auto auto auto;
 
     span {
       font-size: 1.5rem;
@@ -471,7 +476,7 @@ p {
     div {
       width: 70px;
       height: 70px;
-      background-color: white;
+      background-color: #ffffff;
       border-radius: 14px;
 
       a {
@@ -493,11 +498,14 @@ p {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(3600deg);
+    transform: rotate(360deg);
   }
 }
 
 @media (max-width: 900px) {
+  body {
+    background-position: 30% 0%;
+  }
   .home {
     flex-direction: column;
 
@@ -581,7 +589,6 @@ p {
     .form {
       display: flex;
       flex-direction: column;
-      padding: 5% 2%;
       width: 90%;
     }
     .social {
@@ -613,11 +620,35 @@ p {
     .all-projects {
       .project {
         width: auto;
-  
+
         .image-container {
           img {
             width: 300px;
             height: 160px;
+          }
+        }
+      }
+    }
+  }
+  .contact, .message-sent {
+    .form {
+      grid-gap: 20px;
+    }
+    .social {
+      width: 100%;
+      justify-content: center;
+
+      div {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+
+        a {
+          width: 50px;
+          height: 50px;
+
+          img {
+            width: 35px;
           }
         }
       }

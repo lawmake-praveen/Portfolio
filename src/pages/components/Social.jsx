@@ -1,7 +1,7 @@
 import React from "react";
-import  * as logos  from "../../assets/social-media";
+import  {github, linkedin, whatsapp}  from "../../assets/social-media/index";
 
-const socialLinks = (link, name) => {
+const SocialLinks = ({link, name}) => {
   return (
     <div>
       <a
@@ -24,9 +24,9 @@ const Social = () => {
       exit={{ opacity: 0, x: "100%" }}
     >
       <span>Social: </span>
-      {socialLinks("https://github.com/lawmake-praveen", logos.github)}
-      {socialLinks("https://www.linkedin.com/in/lawmake-praveen-928a15239", logos.linkedin)}
-      {socialLinks("https://wa.me/6381376043", logos.whatsapp)}
+      <SocialLinks link="https://github.com/lawmake-praveen" name={github} />
+      <SocialLinks link="https://www.linkedin.com/in/lawmake-praveen-928a15239" name={linkedin} />
+      <SocialLinks link="https://wa.me/6381376043" name={whatsapp} />
     </div>
   );
 };

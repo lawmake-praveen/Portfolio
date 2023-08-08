@@ -11,7 +11,7 @@
 }
 
 ::-webkit-scrollbar {
-  background: #0B1121;
+  background: url(../src/assets/bg-image.jpg);
   width: 8px;
   height: 0px;
 }
@@ -23,7 +23,7 @@
 
 body {
   margin: 0;
-  background: #0B1121;
+  background: url(../src/assets/bg-image.jpg);
 }
 
 * {
@@ -59,14 +59,14 @@ p {
   top: 0;
   right: 0;
   left: 0;
-  background-color: #0B1121;
+  background: url(../src/assets/bg-image.jpg);
   font-size: 1.1rem;
   z-index: 100;
 }
 .navbar .left-navbar {
   font-size: 2rem;
   font-weight: 700;
-  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
+  background: linear-gradient(45deg, #ffffff, #0379e0);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -104,8 +104,7 @@ p {
 }
 
 .scrolled {
-  background-image: #0B1121;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3529411765);
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.2666666667);
 }
 
 .home,
@@ -114,7 +113,7 @@ p {
 .contact,
 .message-sent {
   height: 100vh;
-  background-image: #0B1121;
+  background: url(../src/assets/bg-image.jpg) cover;
   padding: 8vh 2%;
   transition: all 1s;
 }
@@ -143,15 +142,15 @@ p {
   width: 100%;
   border-radius: 50%;
   animation: round 30s infinite ease-in-out;
-  border: 7px ridge transparent;
-  border-color: rgb(53, 1, 106) rgb(2, 0, 4);
+  border: 3px ridge transparent;
+  border-color: #0163b9 #002648;
 }
 .home .right-home {
   position: relative;
   z-index: 2;
 }
 .home .right-home h1 {
-  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
+  background: linear-gradient(45deg, #ffffff, #0379e0);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -163,28 +162,13 @@ p {
 .home .right-home .intro {
   color: #fff;
 }
-.home .right-home::before {
-  content: "";
-  position: absolute;
-  background: radial-gradient(at 50% 50%, #0C253B 0%, rgba(0, 0, 0, 0) 60%);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: rotate(20deg);
-  z-index: -1;
-  transition: all 1s;
-}
-.home .right-home:hover::before {
-  background: radial-gradient(at 50% 50%, #0C253B 0%, rgba(0, 0, 0, 0) 70%);
-}
 
 .about {
   height: -moz-fit-content;
   height: fit-content;
 }
 .about h1 .greetings {
-  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
+  background: linear-gradient(45deg, #ffffff, #0379e0);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -199,7 +183,7 @@ p {
 }
 .about .tech-stack {
   font-weight: 600;
-  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
+  background: linear-gradient(45deg, #ffffff, #0379e0);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -260,7 +244,7 @@ p {
 .about .resume .resume-heading .resume-title,
 .about .resume .resume-heading .name-title {
   margin: 10px 0;
-  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
+  background: linear-gradient(45deg, #ffffff, #0379e0);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -270,7 +254,7 @@ p {
   width: -ms-fit-content;
 }
 .about .resume .side-heading {
-  background-image: linear-gradient(109.6deg, rgb(75, 4, 147) 11.2%, rgb(168, 32, 134) 100%);
+  background: linear-gradient(45deg, #ffffff, #0379e0);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -301,13 +285,14 @@ p {
 .about .resume h2,
 .about .resume .mail-phone {
   text-align: center;
-  color: #fff;
+  color: rgb(157, 157, 224);
 }
 .about .resume hr {
   border-color: rgba(0, 0, 0, 0.4745098039);
 }
 .about .resume .mail-phone a {
-  color: #fff;
+  color: rgb(157, 157, 224);
+  text-decoration: none;
 }
 .about .resume .s-and-k {
   display: grid;
@@ -315,7 +300,8 @@ p {
   grid-template-columns: repeat(4, 1fr);
 }
 .about .resume .detail a {
-  color: #fff;
+  color: rgb(157, 157, 224);
+  text-decoration: none;
 }
 
 .projects {
@@ -333,7 +319,7 @@ p {
   height: 30px;
 }
 .projects .projects-disclaimer .disclaimer {
-  background-color: #0B1121;
+  background-color: #0b1121;
   color: #fff;
   padding: 6px 15px;
   text-align: left;
@@ -353,7 +339,7 @@ p {
   right: -11px;
   top: 25%;
   transform: rotate(45deg);
-  background-color: #0B1121;
+  background-color: #0b1121;
   z-index: 1;
   border-radius: 3px;
 }
@@ -380,10 +366,10 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #0B1121;
+  background: transparent;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7176470588);
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5333333333);
 }
 .projects .all-projects .project .details {
   color: #fff;
@@ -392,7 +378,7 @@ p {
 .projects .all-projects .project a {
   text-align: center;
   text-decoration: none;
-  color: rgb(79, 79, 255);
+  color: rgb(157, 157, 224);
 }
 .projects .all-projects .project a:hover {
   text-decoration: underline;
@@ -409,11 +395,23 @@ p {
 }
 
 .message-sent {
+  height: 100vh;
+  text-align: center;
   font-size: 1.5rem;
   display: grid;
   place-content: center;
+  color: #fff;
 }
 
+.contact {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.contact,
+.message-sent {
+  padding: 8vh 2% 10px 2%;
+}
 .contact .form,
 .message-sent .form {
   padding: 6% 2%;
@@ -439,6 +437,31 @@ p {
   width: 100%;
   border-radius: 10px;
   border: none;
+  background: transparent;
+  box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5607843137);
+  color: #fff;
+}
+.contact .form input::-moz-placeholder, .contact .form textarea::-moz-placeholder, .message-sent .form input::-moz-placeholder, .message-sent .form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5607843137);
+}
+.contact .form input::placeholder,
+.contact .form textarea::placeholder,
+.message-sent .form input::placeholder,
+.message-sent .form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5607843137);
+}
+.contact .form input:-webkit-autofill,
+.contact .form input:-webkit-autofill:hover,
+.contact .form input:-webkit-autofill:focus,
+.contact .form input:-webkit-autofill:active,
+.message-sent .form input:-webkit-autofill,
+.message-sent .form input:-webkit-autofill:hover,
+.message-sent .form input:-webkit-autofill:focus,
+.message-sent .form input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5607843137);
 }
 .contact .form textarea,
 .message-sent .form textarea {
@@ -451,8 +474,16 @@ p {
   height: 40px;
   width: 200px;
   border-radius: 10px;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.5607843137);
   font-size: 1.1rem;
+  background: url(../src/assets/bg-image.jpg);
+  color: #fff;
+  box-shadow: 3px 3px 0px #fff;
+}
+.contact .form button:active,
+.message-sent .form button:active {
+  box-shadow: 0px 0px 0px #fff;
+  transform: translate(3px, 3px);
 }
 .contact .social,
 .message-sent .social {
@@ -461,7 +492,7 @@ p {
   align-items: center;
   gap: 13px;
   width: 75%;
-  margin: auto;
+  margin: 40px auto auto auto;
 }
 .contact .social span,
 .message-sent .social span {
@@ -473,7 +504,7 @@ p {
 .message-sent .social div {
   width: 70px;
   height: 70px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 14px;
 }
 .contact .social div a,
@@ -493,10 +524,13 @@ p {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(3600deg);
+    transform: rotate(360deg);
   }
 }
 @media (max-width: 900px) {
+  body {
+    background-position: 30% 0%;
+  }
   .home {
     flex-direction: column;
   }
@@ -523,7 +557,7 @@ p {
     place-content: center;
     line-height: 70px;
     font-size: 2rem;
-    background-image: #0B1121;
+    background-image: url(../src/assets/bg-image.jpg);
     width: 60%;
     height: 60%;
     visibility: hidden;
@@ -562,7 +596,6 @@ p {
   .contact .form {
     display: flex;
     flex-direction: column;
-    padding: 5% 2%;
     width: 90%;
   }
   .contact .social {
@@ -588,6 +621,25 @@ p {
   .projects .all-projects .project .image-container img {
     width: 300px;
     height: 160px;
+  }
+  .contact .form, .message-sent .form {
+    grid-gap: 20px;
+  }
+  .contact .social, .message-sent .social {
+    width: 100%;
+    justify-content: center;
+  }
+  .contact .social div, .message-sent .social div {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+  }
+  .contact .social div a, .message-sent .social div a {
+    width: 50px;
+    height: 50px;
+  }
+  .contact .social div a img, .message-sent .social div a img {
+    width: 35px;
   }
 }
 @media (max-width: 350px) {
