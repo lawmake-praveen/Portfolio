@@ -31,7 +31,7 @@ $link: rgb(157, 157, 224);
 
 //Scrollbar Settings
 ::-webkit-scrollbar {
-  background: $bg-color;
+  background: $text-bg;
   width: 8px;
   height: 0px;
 }
@@ -504,7 +504,7 @@ p {
 
 @media (max-width: 900px) {
   body {
-    background-position: 30% 0%;
+    background-position: 40% 0%;
   }
   .home {
     flex-direction: column;
