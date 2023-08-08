@@ -529,7 +529,7 @@ p {
 }
 @media (max-width: 900px) {
   body {
-    background-position: 40% 0%;
+    background-position: 45% 0%;
   }
   .home {
     flex-direction: column;
