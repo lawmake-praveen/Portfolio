@@ -586,6 +586,9 @@ p {
         height: 65px;
         border-radius: 13px;
 
+        .tooltip {
+          font-size: 0.8rem;
+        }
         img {
             width: 80%;
             margin: auto;
