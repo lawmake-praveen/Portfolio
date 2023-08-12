@@ -26,9 +26,9 @@ const Projects = () => {
       )}
       <motion.div
         className="projects"
-        initial={{ opacity: 0, x: "-100%" }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: "100%" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: {delay: 0.4} }}
+        exit={{ opacity: 0 }}
       >
         <div className="projects-disclaimer">
           <span

@@ -6,9 +6,13 @@ const Home = () => {
   return (
     <motion.div
       className="home"
-      initial={{ opacity: 0, x: "-100%" }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: "100%" }}
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+        transition: {opacity: {delay: 0.4}, scale: {delay: 0}},
+      }}
+      exit={{ opacity: 0 }}
     >
       <div className="left-home">
         <img src={myPic} alt="My Pic" />
