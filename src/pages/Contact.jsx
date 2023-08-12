@@ -17,9 +17,9 @@ function Contact() {
   return (
     <motion.div
       className="contact"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: {delay: 0.4} }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0, transition: {opacity: {delay: 0.4}, y: {delay: 0}} }}
+      exit={{ opacity: 0, y: 40 }}
     >
       <form onSubmit={handleSubmit} className="form">
         <input

@@ -22,7 +22,6 @@ $text-bg: #0b1121;
 $box: #ffffff8f;
 $link: rgb(157, 157, 224);
 
-
 ::selection {
   background: blue;
   color: #fff;
@@ -139,10 +138,9 @@ p {
   .left-home {
     position: relative;
 
-    img {
+    .img {
       border-radius: 50%;
     }
-
     .for-border {
       position: absolute;
       top: 0;
@@ -590,8 +588,8 @@ p {
           font-size: 0.8rem;
         }
         img {
-            width: 80%;
-            margin: auto;
+          width: 80%;
+          margin: auto;
         }
       }
     }
@@ -642,7 +640,8 @@ p {
       }
     }
   }
-  .contact, .message-sent {
+  .contact,
+  .message-sent {
     .form {
       grid-gap: 20px;
     }
