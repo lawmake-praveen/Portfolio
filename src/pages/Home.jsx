@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { BsBoxArrowUpRight } from 'react-icons/bs'
 import { myPic, myPicSmall } from "../assets/index";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css"; 
@@ -28,6 +30,9 @@ const Home = () => {
           such as React. Committed to delivering high-quality code and
           user-friendly interfaces. Let's connect and collaborate!"
         </p>
+        <Link to='/about' className="about-me-btn">
+          Profile <span><BsBoxArrowUpRight /></span>
+        </Link>
       </div>
     </motion.div>
   );

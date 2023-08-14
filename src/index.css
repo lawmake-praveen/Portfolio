@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 ::-moz-selection {
   background: blue;
-  color: #fff;
   -webkit-text-fill-color: #fff;
 }
 ::selection {
   background: blue;
-  color: #fff;
   -webkit-text-fill-color: #fff;
 }
 
@@ -161,6 +159,43 @@ p {
 }
 .home .right-home .intro {
   color: #fff;
+}
+.home .right-home .about-me-btn {
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  background: #0b1121;
+  height: 40px;
+  width: 130px;
+  padding: 10px 22px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  position: relative;
+  overflow: hidden;
+}
+.home .right-home .about-me-btn span {
+  display: grid;
+  place-content: center;
+  font-size: 1rem;
+}
+.home .right-home .about-me-btn::before {
+  content: "";
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s;
+  mix-blend-mode: difference;
+}
+.home .right-home .about-me-btn:hover::before {
+  transform: translateY(-30%);
+  border-radius: 0;
 }
 
 .about {

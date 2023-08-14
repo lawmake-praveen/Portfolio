@@ -24,7 +24,6 @@ $link: rgb(157, 157, 224);
 
 ::selection {
   background: blue;
-  color: #fff;
   -webkit-text-fill-color: #fff;
 }
 
@@ -162,6 +161,46 @@ p {
     }
     .intro {
       color: $text;
+    }
+    .about-me-btn {
+      font-size: 1.2rem;
+      color: $text;
+      text-decoration: none;
+      background: $text-bg;
+      height: 40px;
+      width: 130px;
+      padding: 10px 22px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      border-radius: 3px;
+      border: 1px solid $text;
+      position: relative;
+      overflow: hidden;
+      
+      span {
+        display: grid;
+        place-content: center;
+        font-size: 1rem;
+      }
+      &::before {
+        content: '';
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: $text;
+        border-radius: 50%;
+        transition: all 0.3s;
+        mix-blend-mode: difference;
+      }
+      &:hover {
+        &::before {
+          transform: translateY(-30%);
+          border-radius: 0;
+        }
+      }
     }
   }
 }
