@@ -622,6 +622,7 @@ p {
   }
   .home {
     flex-direction: column;
+    gap: 0;
   }
   .home .left-home img {
     max-width: 300px;
