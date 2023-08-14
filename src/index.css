@@ -639,6 +639,9 @@ p {
     width: 80%;
     margin: auto;
   }
+  .contact {
+    padding: 12vh 2% 10px 2%;
+  }
   .contact .form {
     display: flex;
     flex-direction: column;
