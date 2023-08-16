@@ -53,7 +53,11 @@ const About = () => {
     restDelta: 0.001,
     mass: 0.001,
   });
-
+  const variants = {
+    initial: { y: 40, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+    exit: { y: 40 }
+  }
   return (
     <>
       {windowWidth && (
@@ -62,9 +66,10 @@ const About = () => {
 
       <motion.div
         className="about"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0, transition: {opacity: {delay: 0.4}, y: {delay: 0}}}}
-        exit={{ opacity: 0, y: 40 }}
+        variants={variants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
       >
         <h1>
           <span className="greetings">Greetings!</span>
