@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Project from "./components/Project";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { projectsArray } from "./components/ProjectContent";
@@ -23,6 +23,9 @@ const Projects = () => {
     animate: { y: 0, opacity: 1 },
     exit: { y: 40 }
   }
+  useEffect(() => {
+    document.title = "Projects | Praveen"
+  },[])
   return (
     <>
       {windowWidth && (

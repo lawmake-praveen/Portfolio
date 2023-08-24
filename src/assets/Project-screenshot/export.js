@@ -8,4 +8,5 @@ export { default as v2painting } from "./v2-painting.jpg";
 export { default as weather } from "./weather.jpg";
 export { default as portfolio } from "./portfolio.png";
 export { default as shopease } from "./shopease.jpg";
-export { default as activities } from './activities-tab.png'
+export { default as activities } from "./activities-tab.png";
+export { default as tmdb } from "./tmdb-app.jpg";

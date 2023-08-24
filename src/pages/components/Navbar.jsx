@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div className={isScrolled ? "navbar scrolled" : "navbar"}>
-      <div className="left-navbar">Praveen</div>
+      <Link to='/' className="left-navbar">Praveen</Link>
       <div
         className={
           sideBar ? "right-navbar right-navbar-active" : "right-navbar"

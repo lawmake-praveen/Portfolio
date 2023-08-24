@@ -9,15 +9,10 @@ import {
   portfolio,
   shopease,
   activities,
+  tmdb,
 } from "../../assets/Project-screenshot/export";
 
 export const projectsArray = [
-  {
-    content: "An E-commerce Website to Shop your favourite products",
-    link: "https://shopease-store.vercel.app/",
-    appLink: "Shopease-E-Commerce",
-    image: shopease,
-  },
   {
     content:
       "A simple personal portfolio website to showcase my skills and projects",
@@ -26,7 +21,21 @@ export const projectsArray = [
     image: portfolio,
   },
   {
-    content: "This Activity-Tap website let you Create, Edit, Group and Delete your day to day activities",
+    content:
+      "A Single website to search all your favourite movies and tv shows",
+    link: "https://movie-in.vercel.app/",
+    appLink: "TMDB App",
+    image: tmdb,
+  },
+  {
+    content: "An E-commerce Website to Shop your favourite products",
+    link: "https://shopease-store.vercel.app/",
+    appLink: "Shopease-E-Commerce",
+    image: shopease,
+  },
+  {
+    content:
+      "This Activity-Tap website let you Create, Edit, Group and Delete your day to day activities",
     link: "https://activities-tab.vercel.app/",
     appLink: "Activity Tab",
     image: activities,

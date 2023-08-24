@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   bootstrap,
   css,
@@ -58,6 +58,9 @@ const About = () => {
     animate: { y: 0, opacity: 1 },
     exit: { y: 40 }
   }
+  useEffect(() => {
+    document.title = "About | Praveen"
+  },[])
   return (
     <>
       {windowWidth && (

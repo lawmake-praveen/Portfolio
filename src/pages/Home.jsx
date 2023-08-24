@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { BsBoxArrowUpRight } from 'react-icons/bs'
@@ -12,6 +12,9 @@ const Home = () => {
     animate: { y: 0, opacity: 1 },
     exit: { y: 40 }
   }
+  useEffect(() => {
+    document.title = "Praveen | Portfolio"
+  },[])
   return (
     <motion.div
       className="home"

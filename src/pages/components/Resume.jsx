@@ -73,57 +73,20 @@ const Resume = () => {
       </p>
       <h3 className="side-heading">Relevent Projects:</h3>
       <div className="detail">
-        <p>
-          ● An{" "}
-          <a href="https://shopease-store.vercel.app/" target="_blank">
-            E-Commerce Website
-          </a>{" "}
-          to browse and shop.
-        </p>
-        <p>
-          ● An{" "}
-          <a href="https://activities-tab.vercel.app/" target="_blank">
-            Activity Tab
-          </a>{" "}
-          to Create, Edit, Group and Delete your day to day Activities.
-        </p>
-        <p>
-          ● A{" "}
-          <a href="https://currency-app-praveen.vercel.app/" target="_blank">
-            Currency Calculator App
-          </a>{" "}
-          to find foreign Exchange Rate
-        </p>
-        <p>
-          ● A{" "}
-          <a
-            href="https://reactnotes-lawmake-praveen.vercel.app/"
-            target="_blank"
-          >
-            React Notes App
-          </a>{" "}
-          to keep day to day notes
-        </p>
+        <ProjectLine initial='A' desc='to search for your favourite Movies and Tv shows' link='https://movie-in.vercel.app/' name='Movie database website' />
+        <ProjectLine initial='An' desc='to browse and shop.' link='https://shopease-store.vercel.app/' name='E-Commerce Website' />
+        <ProjectLine initial='An' desc='to Create, Edit, Group and Delete your day to day Activities.' link='https://activities-tab.vercel.app/' name='Activity Tab' />
+        <ProjectLine initial='A' desc='to find foreign Exchange Rate' link='https://currency-app-praveen.vercel.app/' name='Currency Calculator App' />
+        <ProjectLine initial='A' desc='to keep day to day notes' link='https://reactnotes-lawmake-praveen.vercel.app/' name=' React Notes App' />
         <p>
           In addition to that I have also developed a range of dynamic and
           interactive features and apps using Vanilla JavaScript, React and
           APIs. These include{" "}
-          <a href="https://tic-tac-toe-praveen.vercel.app/" target="_blank">
-            Tic Tac Toe
-          </a>
-          ,{" "}
-          <a href="https://daily-news-praveen.vercel.app/" target="_blank">
-            News App
-          </a>
-          ,{" "}
-          <a href="https://weather-app-praveen.vercel.app/" target="_blank">
-            Weather App
-          </a>
-          ,{" "}
-          <a href="https://plp-pictures-gallery.vercel.app/" target="_blank">
-            Picture Gallery
-          </a>
-          , Password generator, Mathematics Quiz game and several other games
+          <ProjectSpan name='Tic Tac Toe' link='https://tic-tac-toe-praveen.vercel.app/' />
+          <ProjectSpan name='News App' link='https://daily-news-praveen.vercel.app/' />
+          <ProjectSpan name='Weather App' link='https://weather-app-praveen.vercel.app/' />
+          <ProjectSpan name='Picture Gallery' link='https://plp-pictures-gallery.vercel.app/' />
+          Password generator, Mathematics Quiz game and several other games
           and apps.
         </p>
       </div>
@@ -141,5 +104,28 @@ const Resume = () => {
     </div>
   );
 };
+
+const ProjectLine = ({ initial, desc, link, name}) => {
+  return (
+    <p>
+    ● {initial}{" "}
+    <a href={link} target="_blank">
+      {name}
+    </a>{" "}
+    {desc}
+  </p>
+  )
+}
+const ProjectSpan = ({name, link}) => {
+  return (
+    <span>
+      <a href={link} target="_blank">
+    {name}
+  </a>
+  ,{" "}
+    </span>
+    
+  )
+}
 
 export default Resume;

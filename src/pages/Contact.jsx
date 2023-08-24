@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import Social from "./components/Social";
 import { motion } from "framer-motion";
@@ -19,6 +19,9 @@ function Contact() {
     animate: { y: 0, opacity: 1 },
     exit: { y: 40 }
   }
+  useEffect(() => {
+    document.title = "Contact | Praveen"
+  },[])
   return (
     <motion.div
       className="contact"
