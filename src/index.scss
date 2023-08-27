@@ -570,30 +570,31 @@ p {
   .navbar {
     .right-navbar {
       position: fixed;
-      bottom: 0;
+      top: 0;
       right: 0;
       display: grid;
       place-content: center;
       gap: 30px;
       font-size: 2rem;
       background-image: $bg-color;
-      width: 100%;
-      height: 0;
+      width: 0;
+      height: 100%;
       visibility: hidden;
       opacity: 0;
       overflow: hidden;
-      border-radius: 50px 50px 0 0;
-      box-shadow: 0px 0px 3px #fff;
-      transition: all 0.3s ease-in-out;
+      border-radius: 50% 0 0 50%;
+      transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, border-radius 0.5s ease-in-out, box-shadow 0s;
 
       .nav-links {
         text-align: center;
       }
     }
     .right-navbar-active {
-      height: 50%;
+      width: 80%;
       visibility: visible;
       opacity: 1;
+      border-radius: 10px 0 0 10px;
+      box-shadow: 0px 0px 0px 100px #0000009a;
     }
     .menu-close {
       display: block;
