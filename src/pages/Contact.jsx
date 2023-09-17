@@ -64,7 +64,7 @@ function Contact() {
         <input type="email" name="user_email" placeholder="Email" />
         <input type="tel" name="user_phone" placeholder="Phone Number" />
         <textarea name="message" placeholder="Type your Message *" required />
-        <input type="submit" value="Send" className="button" />
+        <input type="submit" value="Send" className="button" disabled={formSubmitted} />
       </form>
       <Social />
     </motion.div>
