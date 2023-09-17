@@ -481,7 +481,7 @@ p {
       grid-column: span 2;
       padding: 20px;
     }
-    button {
+    .button {
       height: 40px;
       width: 200px;
       border-radius: 10px;
@@ -490,6 +490,7 @@ p {
       background: $bg-color;
       color: $text;
       box-shadow: 3px 3px 0px #fff;
+      transition: all 0.1s;
 
       &:active {
         box-shadow: 0px 0px 0px #fff;

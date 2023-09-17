@@ -16,6 +16,7 @@ import {
   scss,
   nodejs,
   redux,
+  flutter,
 } from "../assets/tech-stack/tech-stack-export";
 import Resume from "./components/Resume";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -28,6 +29,7 @@ const About = () => {
     { name: "CSS", image: css },
     { name: "JavaScript", image: js },
     { name: "React.js", image: react },
+    { name: "Flutter", image: flutter },
     { name: "Redux.js", image: redux },
     { name: "Node.js", image: nodejs },
     { name: "Express.js", image: expressjs },
@@ -78,13 +80,13 @@ const About = () => {
           <span className="greetings">Greetings!</span>
         </h1>
         <p>
-          As a self-taught web developer, I have learned tools and languages
-          such as JavaScript, React, HTML, CSS, Node.js and jQuery.
+          As a self-taught web and app developer, I have learned tools and languages
+          such as JavaScript, React, Flutter, HTML, CSS, Node.js and jQuery.
           Additionally, I have a good understanding of UI/UX design. I have been
-          learning these skills and tools for the past eight months through
+          learning these skills and tools for the past one year through
           online courses and now looking to start my professional web developer
           career. I am excited to connect with like-minded professionals to
-          create stunning websites.
+          create stunning websites and apps.
         </p>
         <h2 className="tech-stack">Tech Stack and Tools:</h2>
         <div className="skills">

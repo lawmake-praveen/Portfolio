@@ -505,8 +505,8 @@ p {
   grid-column: span 2;
   padding: 20px;
 }
-.contact .form button,
-.message-sent .form button {
+.contact .form .button,
+.message-sent .form .button {
   height: 40px;
   width: 200px;
   border-radius: 10px;
@@ -515,9 +515,10 @@ p {
   background: url(../src/assets/bg-image.jpg);
   color: #fff;
   box-shadow: 3px 3px 0px #fff;
+  transition: all 0.1s;
 }
-.contact .form button:active,
-.message-sent .form button:active {
+.contact .form .button:active,
+.message-sent .form .button:active {
   box-shadow: 0px 0px 0px #fff;
   transform: translate(3px, 3px);
 }

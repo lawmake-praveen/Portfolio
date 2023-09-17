@@ -1,12 +1,42 @@
-import React, { useEffect } from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import React, { useEffect, useRef } from "react";
 import Social from "./components/Social";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 function Contact() {
-  const [state, handleSubmit] = useForm("xpzebjqn");
+  const form = useRef();
+  useEffect(() => {
+    document.title = "Contact | Praveen";
+  }, []);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  if (state.succeeded) {
+    emailjs
+      .sendForm(
+        "service_a6b0nl2",
+        "template_uj7yo7o",
+        form.current,
+        "g7-v74A0jf6nP5W_j"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setFormSubmitted(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+  const variants = {
+    initial: { y: 40, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+    exit: { y: 40 },
+  };
+
+  if (formSubmitted) {
     return (
       <div className="message-sent">
         <p className="message">Message Sent. Thanks for Reaching Out!</p>
@@ -14,14 +44,7 @@ function Contact() {
       </div>
     );
   }
-  const variants = {
-    initial: { y: 40, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-    exit: { y: 40 }
-  }
-  useEffect(() => {
-    document.title = "Contact | Praveen"
-  },[])
+
   return (
     <motion.div
       className="contact"
@@ -30,42 +53,21 @@ function Contact() {
       animate="animate"
       exit="exit"
     >
-      <form onSubmit={handleSubmit} className="form">
+      <form ref={form} onSubmit={sendEmail} className="form">
         <input
           type="text"
-          name="firstname"
-          id="name"
+          name="from_name"
+          required
           placeholder="First Name *"
-          required
         />
-        <input type="text" name="lastname" id="name" placeholder="Last Name" />
-        <input
-          id="email"
-          type="email"
-          name="email"
-          placeholder="Email *"
-          required
-        />
-        <input type="tel" name="phone" id="phone" placeholder="Mobile No" />
-        <ValidationError prefix="Email" field="email" errors={state.errors} />
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Write Something *"
-          required
-        />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={state.errors}
-        />
-        <button type="submit" disabled={state.submitting}>
-          Submit
-        </button>
+        <input type="text" name="user_last_name" placeholder="Last Name" />
+        <input type="email" name="user_email" placeholder="Email" />
+        <input type="tel" name="user_phone" placeholder="Phone Number" />
+        <textarea name="message" placeholder="Type your Message *" required />
+        <input type="submit" value="Send" className="button" />
       </form>
       <Social />
     </motion.div>
   );
 }
-
 export default Contact;
