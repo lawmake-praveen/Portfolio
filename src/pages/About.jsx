@@ -17,6 +17,7 @@ import {
   nodejs,
   redux,
   flutter,
+  dart,
 } from "../assets/tech-stack/tech-stack-export";
 import Resume from "./components/Resume";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -30,6 +31,7 @@ const About = () => {
     { name: "JavaScript", image: js },
     { name: "React.js", image: react },
     { name: "Flutter", image: flutter },
+    { name: "Dart", image: dart },
     { name: "Redux.js", image: redux },
     { name: "Node.js", image: nodejs },
     { name: "Express.js", image: expressjs },
