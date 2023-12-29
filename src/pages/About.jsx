@@ -84,10 +84,8 @@ const About = () => {
         <p>
           As a self-taught web and app developer, I have learned tools and languages
           such as JavaScript, React, Flutter, HTML, CSS, Node.js and jQuery.
-          Additionally, I have a good understanding of UI/UX design. I have been
-          learning these skills and tools for the past one year through
-          online courses and now looking to start my professional web developer
-          career. I am excited to connect with like-minded professionals to
+          Additionally, I have a good understanding of UI/UX design.
+          I am excited to connect with like-minded professionals to
           create stunning websites and apps.
         </p>
         <h2 className="tech-stack">Tech Stack and Tools:</h2>
