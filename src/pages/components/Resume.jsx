@@ -4,22 +4,40 @@ import { BsDownload } from "react-icons/bs";
 
 const Resume = () => {
   const skills = [
-    "JavaScript",
-    "HTML5",
-    "CSS3",
-    "React.js",
     "Flutter",
+    "React.js",
     "Dart",
+    "JavaScript",
     "Node.js",
     "Express.js",
     "Redux.js",
+    "AWS",
+    "Mongo DB",
+    "MySql",
+    "HTML",
+    "CSS (SCSS)",
     "JQuery",
     "Figma",
-    "Github",
-    "Scss",
+    "Framer",
     "Material UI",
     "Tailwind",
     "Bootstrap",
+  ];
+
+  const tools = [
+    "Git",
+    "GitHub",
+    "GitLab",
+    "Jira",
+    "Open Project",
+    "VS code",
+    "Xcode",
+    "Android Studio",
+    "Cursor AI",
+    "Postman",
+    "Office 365",
+    "Google Workspace",
+    "Slack",
   ];
 
   return (
@@ -39,23 +57,39 @@ const Resume = () => {
         <h2 className="name-title">Lawmake Praveen</h2>
       </div>
       <div className="mail-phone">
+        <a href="tel:6381376043">6381376043 </a>
+        |&nbsp;
         <a href="mailto:lawmakepraveen@gmail.com" target="_blank">
           lawmakepraveen@gmail.com
         </a>{" "}
         |&nbsp;
-        <a href="tel:6381376043">6381376043</a>
+        <a href="https://www.linkedin.com/in/lawmakepraveen/" target="_blank">
+          LinkedIn
+        </a>{" "}
       </div>
       <hr />
-      <h3 className="side-heading">Profile Snapshot:</h3>
+      <h3 className="side-heading">Summary:</h3>
       <p className="detail">
-        A self-guided developer with an ability to design and develop dynamic,
-        responsive, user-friendly websites and apps with cross-browser and cross
-        platform compatibility. Staying up to date with the latest trends and
-        quickly learning new tools or languages is a plus.
+        Seasoned Web and Mobile App Developer with two years of experience in
+        React and Flutter. I have delivered high level scalable apps and
+        websites. I have hands-on experience with AWS which involves deploying
+        and scaling applications, enhancing performance and reliability in a
+        cost effective manner. In addition to development, I have successfully
+        led teams for two projects. I have guided junior developers and interns
+        in the development phase. As I am familiar with UI/UX principles it is
+        much easier and convenient for me to reach the pixel perfect UI in
+        mobile and web apps
       </p>
-      <h3 className="side-heading">Skills and Knowledge:</h3>
+      <h3 className="side-heading">Skills:</h3>
       <p className="detail s-and-k">
         {skills.map((item) => {
+          return <span key={item}>● {item}</span>;
+        })}
+      </p>
+
+      <h3 className="side-heading">Tools and Management:</h3>
+      <p className="detail s-and-k">
+        {tools.map((item) => {
           return <span key={item}>● {item}</span>;
         })}
       </p>
@@ -70,8 +104,7 @@ const Resume = () => {
       </div>
       <h3 className="side-heading">Education:</h3>
       <p className="detail">
-        B.Sc. Physics. St John’s College, Palayamkottai, MS University (2017 –
-        2020)
+        B.Sc, St John’s College, Palayamkottai, MS University (2017 – 2020)
       </p>
       <h3 className="side-heading">Relevent Projects:</h3>
       <div className="detail">
@@ -125,20 +158,14 @@ const Resume = () => {
             name="Picture Gallery"
             link="https://plp-pictures-gallery.vercel.app/"
           />
-          Portfolio app, Password generator, Mathematics Quiz game and several other games and
-          apps.
+          Portfolio app, Password generator, Mathematics Quiz game and several
+          other games and apps.
         </p>
       </div>
       <h3 className="side-heading">Known Languages:</h3>
       <div className="detail">
         <p>Tamil (Native)</p>
         <p>English (Working Proficency)</p>
-      </div>
-      <h3 className="side-heading">Technical Skills:</h3>
-      <div className="detail">
-        <p>MS PowerPoint</p>
-        <p>MS Excel</p>
-        <p>MS Word</p>
       </div>
     </div>
   );

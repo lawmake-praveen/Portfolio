@@ -25,7 +25,7 @@ const Social = () => {
     >
       <span>Social: </span>
       <SocialLinks link="https://github.com/lawmake-praveen" name={github} />
-      <SocialLinks link="https://www.linkedin.com/in/lawmake-praveen-928a15239" name={linkedin} />
+      <SocialLinks link="https://www.linkedin.com/in/lawmakepraveen/" name={linkedin} />
       <SocialLinks link="https://wa.me/6381376043" name={whatsapp} />
     </div>
   );

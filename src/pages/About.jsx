@@ -18,6 +18,10 @@ import {
   redux,
   flutter,
   dart,
+  aws,
+  jira,
+  postman,
+  xcode,
 } from "../assets/tech-stack/tech-stack-export";
 import Resume from "./components/Resume";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -26,20 +30,24 @@ const About = () => {
   const [showToolTip, setShowToolTip] = useState({});
 
   const skills = [
-    { name: "HTML", image: html },
-    { name: "CSS", image: css },
-    { name: "JavaScript", image: js },
-    { name: "React.js", image: react },
     { name: "Flutter", image: flutter },
+    { name: "React.js", image: react },
     { name: "Dart", image: dart },
+    { name: "JavaScript", image: js },
     { name: "Redux.js", image: redux },
     { name: "Node.js", image: nodejs },
     { name: "Express.js", image: expressjs },
+    { name: "AWS", image: aws },
+    { name: "Postman", image: postman },
+    { name: "Jira", image: jira },
+    { name: "Xcode", image: xcode },
+    { name: "HTML", image: html },
+    { name: "CSS", image: css },
+    { name: "Scss", image: scss },
     { name: "JQuery", image: jquery },
     { name: "Git", image: git },
     { name: "GitHub", image: github },
     { name: "Figma", image: figma },
-    { name: "Scss", image: scss },
     { name: "Framer Motion", image: framer },
     { name: "Material UI", image: mui },
     { name: "Tailwind CSS", image: tailwind },
@@ -60,11 +68,11 @@ const About = () => {
   const variants = {
     initial: { y: 40, opacity: 0 },
     animate: { y: 0, opacity: 1 },
-    exit: { y: 40 }
-  }
+    exit: { y: 40 },
+  };
   useEffect(() => {
-    document.title = "About | Praveen"
-  },[])
+    document.title = "About | Praveen";
+  }, []);
   return (
     <>
       {windowWidth && (
@@ -82,11 +90,11 @@ const About = () => {
           <span className="greetings">Greetings!</span>
         </h1>
         <p>
-          As a self-taught web and app developer, I have learned tools and languages
-          such as JavaScript, React, Flutter, HTML, CSS, Node.js and jQuery.
-          Additionally, I have a good understanding of UI/UX design.
-          I am excited to connect with like-minded professionals to
-          create stunning websites and apps.
+          As a self-taught web and app developer, I have learned tools and
+          languages such as JavaScript, React, Flutter, HTML, CSS, Node.js and
+          jQuery. Additionally, I have a good understanding of UI/UX design. I
+          am excited to connect with like-minded professionals to create
+          stunning websites and apps.
         </p>
         <h2 className="tech-stack">Tech Stack and Tools:</h2>
         <div className="skills">
@@ -94,10 +102,18 @@ const About = () => {
             return (
               <div
                 key={item.name}
-                onMouseEnter={(prev) => setShowToolTip({...prev, [item.name]: true})}
-                onMouseLeave={(prev) => setShowToolTip({...prev, [item.name]: false})}
+                onMouseEnter={(prev) =>
+                  setShowToolTip({ ...prev, [item.name]: true })
+                }
+                onMouseLeave={(prev) =>
+                  setShowToolTip({ ...prev, [item.name]: false })
+                }
               >
-                <span className={`tooltip ${showToolTip[item.name] && "show-tooltip"}`}>
+                <span
+                  className={`tooltip ${
+                    showToolTip[item.name] && "show-tooltip"
+                  }`}
+                >
                   {item.name}
                 </span>
                 <img src={item.image} alt={item.name} />

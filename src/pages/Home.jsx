@@ -35,10 +35,13 @@ const Home = () => {
       <div className="right-home">
         <h1>Hi I'm Lawmake Praveen</h1>
         <p className="intro">
-          "An enthusiastic junior web developer with hands-on experience in HTML, CSS,
-          JavaScript, React, and Flutter for mobile application development.
-          Commited to delivering scalable codebases and user-centric interfaces
-          across multiple platforms. Let's connect and collaborate!"
+          Seasoned Web and Mobile App Developer with two years of experience in
+          React and Flutter. I have delivered high level scalable apps and
+          websites. <br />I have hands-on experience with AWS which involves
+          deploying and scaling applications, enhancing performance and
+          reliability in a cost effective manner. In addition to development, I
+          have successfully led teams for two successful projects. <br />
+          Let's connect for impactful collabration
         </p>
         <Link to="/about" className="about-me-btn">
           Profile{" "}
