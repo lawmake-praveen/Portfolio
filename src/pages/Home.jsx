@@ -36,7 +36,7 @@ const Home = () => {
         <h1>Hi I'm Lawmake Praveen</h1>
         <p className="intro">
           Seasoned Web and Mobile App Developer with two years of experience in
-          React and Flutter. I have delivered high level scalable apps and
+          Flutter and React. I have delivered high level scalable apps and
           websites. <br />I have hands-on experience with AWS which involves
           deploying and scaling applications, enhancing performance and
           reliability in a cost effective manner. In addition to development, I

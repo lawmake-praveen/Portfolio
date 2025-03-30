@@ -71,7 +71,7 @@ const Resume = () => {
       <h3 className="side-heading">Summary:</h3>
       <p className="detail">
         Seasoned Web and Mobile App Developer with two years of experience in
-        React and Flutter. I have delivered high level scalable apps and
+        Flutter and React. I have delivered high level scalable apps and
         websites. I have hands-on experience with AWS which involves deploying
         and scaling applications, enhancing performance and reliability in a
         cost effective manner. In addition to development, I have successfully
