@@ -35,7 +35,7 @@ const Home = () => {
       <div className="right-home">
         <h1>Hi I'm Lawmake Praveen</h1>
         <p className="intro">
-          Seasoned Web and Mobile App Developer with two years of experience in
+          Seasoned Web and Mobile App Developer with three years of experience in
           Flutter and React. I have delivered high level scalable apps and
           websites. <br />I have hands-on experience with AWS which involves
           deploying and scaling applications, enhancing performance and

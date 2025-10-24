@@ -1,14 +1,10 @@
 import React from "react";
-import  {github, linkedin, whatsapp}  from "../../assets/social-media/index";
+import { github, linkedin, whatsapp } from "../../assets/social-media/index";
 
-const SocialLinks = ({link, name}) => {
+const SocialLinks = ({ link, name }) => {
   return (
     <div>
-      <a
-        href={link}
-        target="_blank"
-        className="box"
-      >
+      <a href={link} target="_blank" className="box">
         <img src={name} />
       </a>
     </div>
@@ -25,7 +21,10 @@ const Social = () => {
     >
       <span>Social: </span>
       <SocialLinks link="https://github.com/lawmake-praveen" name={github} />
-      <SocialLinks link="https://www.linkedin.com/in/lawmakepraveen/" name={linkedin} />
+      <SocialLinks
+        link="https://www.linkedin.com/in/lawmakepraveen/"
+        name={linkedin}
+      />
       <SocialLinks link="https://wa.me/6381376043" name={whatsapp} />
     </div>
   );
